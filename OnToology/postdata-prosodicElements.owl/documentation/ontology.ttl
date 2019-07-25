@@ -1,0 +1,2396 @@
+@prefix : <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> .
+
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> rdf:type owl:Ontology ;
+                                                                    <http://purl.org/dc/elements/1.1/contributors> """Alvaro Pérez (LINHD_POSTDATA-UNED)
+https://www.linkedin.com/in/álvaro-pérez-pozo-ab241154/"""@en ,
+                                                                                                                   """Bruno Sartini (Bolonia University)
+https://orcid.org/0000-0002-9152-4402"""@en ,
+                                                                                                                   """Javier de la Rosa (LINHD_POSTDATA-UNED)
+https://www.linkedin.com/in/versae/"""@en ,
+                                                                                                                   """Oscar Corcho (Universidad Politécnica de Madrid)
+http://orcid.org/0000-0002-9260-0753"""@en ;
+                                                                    <http://purl.org/dc/elements/1.1/creator> """Helena Bermúdez Sabel 
+https://orcid.org/0000-0001-7782-206X"""@en ,
+                                                                                                              """Mª Luisa Díez Platas 
+https://orcid.org/0000-0002-9416-3147"""@en ;
+                                                                    <http://purl.org/dc/elements/1.1/date> "2019-07-12"@en ;
+                                                                    <http://purl.org/dc/elements/1.1/description> """This ontology contains the classes and properties necessary to structure the information of a prosodic analysis, that is to say, the information obtained from the study of the meters and the forms of versification.
+In poetry, the metric is the basic rhythmic structure of the verses of a poetic work."""@en ;
+                                                                    <http://purl.org/dc/elements/1.1/title> "postdata-structural ontology"@en ;
+                                                                    <http://purl.org/dc/terms/publisher> """POSTDATA Project
+
+“This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement Nº [679528])”
+Principal Investigator. Elena González Blanco -- https://orcid.org/0000-0002-0448-1812
+Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958"""@en ,
+                                                                                                         "POSTDATA Project" ;
+                                                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "pdprosodic"@en ;
+                                                                    owl:versionInfo "V1.0" ;
+                                                                    <http://www.w3.org/2003/06/sw-vocab-status/ns#license> "https://creativecommons.org/licenses/by/4.0/"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributors
+<http://purl.org/dc/elements/1.1/contributors> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#license
+<http://www.w3.org/2003/06/sw-vocab-status/ns#license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-audience
+:vc-audience rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-audienceEducationLevel
+:vc-audienceEducationLevel rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-authorEducationLevel
+:vc-authorEducationLevel rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-birthDateCertainty
+:vc-birthDateCertainty rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-birthPlaceCertainty
+:vc-birthPlaceCertainty rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-certainty
+:vc-certainty rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-clausula
+:vc-clausula rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-clausulaSchemaType
+:vc-clausulaSchemaType rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-dateCertainty
+:vc-dateCertainty rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-feetType
+:vc-feetType rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-figureCategory
+:vc-figureCategory rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-footType
+:vc-footType rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-function
+:vc-function rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-gender
+:vc-gender rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-genre
+:vc-genre rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-metricalCategory
+:vc-metricalCategory rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-metricalComplexity
+:vc-metricalComplexity rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-metricalContext
+:vc-metricalContext rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-metricalType
+:vc-metricalType rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-poeticType
+:vc-poeticType rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-religiousAffiliation
+:vc-religiousAffiliation rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-rhymeCategory
+:vc-rhymeCategory rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-rhymeDispositionType
+:vc-rhymeDispositionType rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-roleFunction
+:vc-roleFunction rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-script
+:vc-script rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-socialStatus
+:vc-socialStatus rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfBibliographicItem
+:vc-typeOfBibliographicItem rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfCharacter
+:vc-typeOfCharacter rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfDesignation
+:vc-typeOfDesignation rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfEdition
+:vc-typeOfEdition rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfEvent
+:vc-typeOfEvent rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfIntertextuality
+:vc-typeOfIntertextuality rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfMusicalNotation
+:vc-typeOfMusicalNotation rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfParatext
+:vc-typeOfParatext rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfPlace
+:vc-typeOfPlace rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfRedaction
+:vc-typeOfRedaction rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfRhymeMatching
+:vc-typeOfRhymeMatching rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfStanza
+:vc-typeOfStanza rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-typeOfStanzaEdition
+:vc-typeOfStanzaEdition rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-unitType
+:vc-unitType rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-versificationType
+:vc-versificationType rdf:type rdfs:Datatype .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vc-writingTechnique
+:vc-writingTechnique rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#analyses
+:analyses rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isAnalysedThrough ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :patterningMetricalScheme ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ;
+          rdfs:comment "This property points to an instance of Redaction in which a WorkPattern, StanzaPattern or LinePattern presents analytical information about the work as a whole, the stanzas or the lines,  respectively." ;
+          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+          rdfs:label "analyses"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#clausula
+:clausula rdf:type owl:ObjectProperty ;
+          rdfs:domain :Foot ;
+          rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                       owl:hasValue <http://postdata.linhd.uned.es/kos/clausula>
+                     ] ;
+          rdfs:comment "The categorisation of the item according to the rhythmic ending of a line  determined by the number of unstressed syllables following the last stressed one. This property is both valid for accentual and syllabic versification, so possible values include: masculine (zero syllables), femenine (one), dactylic, proparoxitone, etc."@en ;
+          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#clausula"@en ;
+          rdfs:label "clausula"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#clausulaSchemeType
+:clausulaSchemeType rdf:type owl:ObjectProperty ;
+                    rdfs:domain :StanzaPattern ;
+                    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                 owl:hasValue <http://postdata.linhd.uned.es/kos/clausulaScheme-type>
+                               ] ;
+                    rdfs:comment "Categorisation of the stanza according to the distribution of clausulae/gender of rhymes (eg. “classic”, “heterogonique”, etc.)"@en ;
+                    rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                    rdfs:label "clausulaSchemeType"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#corresponds
+:corresponds rdf:type owl:ObjectProperty ;
+             owl:inverseOf :matches ;
+             rdfs:domain :RhymeMatch ;
+             rdfs:range :Rhyme ;
+             rdfs:comment "This property points to the instance of Rhyme whose rhyming word is described by the current instance of RhymeMatch"@en ;
+             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+             rdfs:label "corresponds"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#employs
+:employs rdf:type owl:ObjectProperty ;
+         owl:inverseOf :isEmployedIn ;
+         rdfs:domain :MetricalEncoding ;
+         rdfs:range :Symbol ;
+         rdfs:comment "This propery points to a Symbol used in metrical notation being defined"@en ;
+         rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+         rdfs:label "employs"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#feetType
+:feetType rdf:type owl:ObjectProperty ;
+          rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                       owl:hasValue <http://postdata.linhd.uned.es/kos/feet-type>
+                     ] ;
+          rdfs:comment "Categorisation of the stanza or line according to the type of feet"@en ;
+          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+          rdfs:label "feetType"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#footType
+:footType rdf:type owl:ObjectProperty ;
+          rdfs:domain :Foot ;
+          rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                       owl:hasValue <http://postdata.linhd.uned.es/kos/foot-type>
+                     ] ;
+          rdfs:comment "Type of foot (e.g. iamb)"@en ;
+          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+          rdfs:label "footType"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasFirstFoot
+:hasFirstFoot rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              owl:inverseOf :isFirstFoot ;
+              rdfs:domain :LinePattern ;
+              rdfs:range :Foot ;
+              <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+              <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
+              rdfs:comment "This property points to the first Foot of the line" ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "hasFirstFoot"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasFirstUnit
+:hasFirstUnit rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isFirstUnit ;
+              rdfs:domain :Foot ;
+              rdfs:range :FootDivision ;
+              rdfs:comment "This property points to the firt unit in which the foot is divided (an instance of FootDivision)"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "hasFirstUnit"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRhymeWord
+:hasRhymeWord rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              owl:inverseOf :isRhymeWord ;
+              rdfs:domain :Rhyme ;
+              <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+              <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
+              rdfs:comment "This property points to the instance of Word for a further linguistic analysis/division by words"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "hasRhymeWord"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough
+:isAnalysedThrough rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:range :Pattern ;
+                   <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                   <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
+                   rdfs:comment "This property points to an item (Pattern) that contains analytical content about the current instance of Redaction or about its stanzas or lines"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEchoOf
+:isEchoOf rdf:type owl:ObjectProperty ;
+          rdfs:comment "This property points to a following Word (echo) that that rhymes with the current instance of Word"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEmployedIn
+:isEmployedIn rdf:type owl:ObjectProperty ;
+              rdfs:domain :Symbol ;
+              rdfs:range :MetricalEncoding ;
+              rdfs:comment "This property points to the instance of MetricalEncoding that employs the item at hand"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "isEmployedIn"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isFirstFoot
+:isFirstFoot rdf:type owl:ObjectProperty ;
+             rdfs:domain :Foot ;
+             rdfs:range :LinePattern ;
+             rdfs:comment "This property points to the LinePattern whose feet description begins with the current item under analysis"@en ;
+             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+             rdfs:label "isFirstFoot"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isFirstUnit
+:isFirstUnit rdf:type owl:ObjectProperty ;
+             rdfs:domain :FootDivision ;
+             rdfs:range :Foot ;
+             rdfs:comment "This property points to the Foot that contains the item at hand as its first element"@en ,
+                          "isFirstUnit"@en ;
+             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isPresentIn
+:isPresentIn rdf:type owl:ObjectProperty ;
+             owl:inverseOf :presents ;
+             rdfs:domain :Rhyme ;
+             rdfs:comment "This property points to the text (instance of Redaction, Line or Stanza) which contains the current item under analysis"@en ;
+             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+             rdfs:label "isPresentIn"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isRhymeWord
+:isRhymeWord rdf:type owl:ObjectProperty ;
+             rdfs:range :Rhyme ;
+             rdfs:comment "This property points to the instance of Rhyme that contains the item at hand as its rhyme word"@en ;
+             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+             rdfs:label "isRhymeWord"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isUsedBy
+:isUsedBy rdf:type owl:ObjectProperty ;
+          owl:inverseOf :uses ;
+          rdfs:domain :MetricalEncoding ;
+          rdfs:range :Pattern ;
+          rdfs:comment "This property points to an instance of LinePattern, StanzaPattern or WorkPattern which uses the convention defined in the current instance of MetricalEncoding"@en ;
+          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+          rdfs:label "isUsedBy"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#matches
+:matches rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :Rhyme ;
+         rdfs:range :RhymeMatch ;
+         <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+         <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
+         rdfs:comment "This property points to the instance of RhymeMatch that contains the echo of the current rhyme word under analysis"@en ;
+         rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+         rdfs:label "matches"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalCategory
+:metricalCategory rdf:type owl:ObjectProperty ;
+                  rdfs:domain :WorkPattern ;
+                  rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                               owl:hasValue <http://postdata.linhd.uned.es/kos/metrical-category>
+                             ] ;
+                  rdfs:comment "Major category to identify the metrical type (e.g. fixed forms vs strophic)"@en ;
+                  rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                  rdfs:label "metricalCategory"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalComplexity
+:metricalComplexity rdf:type owl:ObjectProperty ;
+                    rdfs:domain :WorkPattern ;
+                    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                 owl:hasValue <http://postdata.linhd.uned.es/kos/metrical-complexity>
+                               ] ;
+                    rdfs:comment "Categorisation depending on the number of syllables: usually, less or more than eight"@en ;
+                    rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                    rdfs:label "metricalComplexity"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalContext
+:metricalContext rdf:type owl:ObjectProperty ;
+                 rdfs:domain :WorkPattern ;
+                 rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                              owl:hasValue <http://postdata.linhd.uned.es/kos/metrical-context>
+                            ] ;
+                 rdfs:comment "Categorisation depending on whether all lines have the same number of syllables"@en ;
+                 rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                 rdfs:label "metricalContext"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalType
+:metricalType rdf:type owl:ObjectProperty ;
+              rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                           owl:hasValue <http://postdata.linhd.uned.es/kos/metrical-type>
+                         ] ;
+              rdfs:comment "Categorisation of the stanza/line  grouping or work according to metrics. E.g. “sapphic stanza”"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "metricalType"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#nextFoot
+:nextFoot rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          owl:inverseOf :previousFoot ;
+          rdfs:domain :Foot ;
+          rdfs:range :Foot ;
+          <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+          <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
+          rdfs:comment "This property points to the next instance of Foot"@en ;
+          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+          rdfs:label "nextFoot"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#nextFootAfterCaesura
+:nextFootAfterCaesura rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      owl:inverseOf :previousFootBeforeCaesura ;
+                      rdfs:domain :Foot ;
+                      rdfs:range :Foot ;
+                      <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                      <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
+                      rdfs:comment "This property points to the next instance of Foot when this is positioned after a caesura"@en ;
+                      rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                      rdfs:label "nextFootAfterCaesura"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#nextUnit
+:nextUnit rdf:type owl:ObjectProperty ;
+          owl:inverseOf :previousUnit ;
+          rdfs:domain :FootDivision ;
+          rdfs:range :FootDivision ;
+          rdfs:comment "This property points to the next unit that forms the foot (an instance of FootDivision)"@en ;
+          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+          rdfs:label "nextUnit"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#presents
+:presents rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:range :Rhyme ;
+          <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+          <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
+          rdfs:comment "This property points to an instance of Rhyme that is contained in the current item under analysis"@en ;
+          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+          rdfs:label "presents"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#presentsRhymeMatching
+:presentsRhymeMatching rdf:type owl:ObjectProperty ;
+                       rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                    owl:hasValue <http://postdata.linhd.uned.es/kos/rhymeMatching-type>
+                                  ] ;
+                       rdfs:comment "Categorisation of the stanza or  work according to the degree in which the different rhyming sounds match (e.g. assonant, consonant...)"@en ;
+                       rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                       rdfs:label "presentsRhymeMatching"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#previousFoot
+:previousFoot rdf:type owl:ObjectProperty ;
+              rdfs:domain :Foot ;
+              rdfs:range :Foot ;
+              rdfs:comment "This property points to the previous instance of Foot"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "previousFoot"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#previousFootBeforeCaesura
+:previousFootBeforeCaesura rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Foot ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :previousFootBeforeCaesura ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :Foot
+                                       ] ;
+                           rdfs:range :Foot ;
+                           rdfs:comment "This property points to the previous instance of Foot when this is positioned before a caesura"@en ;
+                           rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                           rdfs:label "previousFootBeforeCaesura"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#previousUnit
+:previousUnit rdf:type owl:ObjectProperty ;
+              rdfs:domain :FootDivision ;
+              rdfs:range :FootDivision ;
+              rdfs:comment "This property points to the previous unit that forms the foot (an instance of FootDivision)"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "previousUnit"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeDispositionType
+:rhymeDispositionType rdf:type owl:ObjectProperty ;
+                      rdfs:domain :StanzaPattern ;
+                      rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                   owl:hasValue <http://postdata.linhd.uned.es/kos/rhymeDisposition-type>
+                                 ] ;
+                      rdfs:comment "Categorisation of the stanza according to the diposition of the rhymes (eg. “cross”, “pair”)"@en ;
+                      rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                      rdfs:label "rhymeDispositionType"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymesWith
+:rhymesWith rdf:type owl:ObjectProperty .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#typeOfRhymeMatching
+:typeOfRhymeMatching rdf:type owl:ObjectProperty ;
+                     rdfs:domain :RhymeMatch ;
+                     rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                  owl:hasValue <http://postdata.linhd.uned.es/kos/rhymeMatching-type>
+                                ] ;
+                     rdfs:comment "Explain the degree in which the different rhyming sounds match (e.g. assonant, consonant, perfect, imperfect, half-rhyme...)"@en ;
+                     rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                     rdfs:label "typeOfRhymeMatching"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#unitType
+:unitType rdf:type owl:ObjectProperty ;
+          rdfs:domain :FootDivision ;
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                       owl:hasValue <http://postdata.linhd.uned.es/kos/footUnit-type>
+                     ] ;
+          rdfs:comment "The type of unit that defines the foot division"@en ;
+          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+          rdfs:label "unitType"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#uses
+:uses rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:domain :Pattern ;
+      rdfs:range :MetricalEncoding ;
+      <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+      <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
+      rdfs:comment "This property points to the instance of MetricalEncoding in which the conventions implemented in the item at hand are explained" ;
+      rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+      rdfs:label "uses"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#versificationType
+:versificationType rdf:type owl:ObjectProperty ;
+                   rdfs:domain :WorkPattern ;
+                   rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                owl:hasValue <http://postdata.linhd.uned.es/kos/versification-type>
+                              ] ;
+                   rdfs:comment "Type of metre: accentual verse, accentual-syllabic verse, syllabic verse, quantitative verse, etc."@en ;
+                   rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                   rdfs:label "versificationType"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesLine
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesLine> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:subPropertyOf :analyses ;
+                                                                                  rdfs:domain :LinePattern ;
+                                                                                  rdfs:comment "This property points to an instance of Line about which the item at hand presents analytical information"@en ;
+                                                                                  rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                                                                                  rdfs:label "analysesLine"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesStanza
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesStanza> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:subPropertyOf :analyses ;
+                                                                                    rdfs:domain :StanzaPattern ;
+                                                                                    rdfs:comment "This property points to an instance of Stanza about which the item at hand presents analytical information"@en ;
+                                                                                    rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                                                                                    rdfs:label "analysesStanza"@en .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain owl:Thing .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#accentedVowels
+:accentedVowels rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :LinePattern ;
+                rdfs:range xsd:string ;
+                <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                rdfs:comment "Stressed vowels in the order in which they occur in the text"@en ;
+                rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                rdfs:label "accentedVowels"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#accentedVowelsPattern
+:accentedVowelsPattern rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :LinePattern ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :accentedVowelsPattern ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] ;
+                       rdfs:range xsd:string ;
+                       <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                       rdfs:comment "Stressed vowels in a line, in alphabetical order to show sound repetitions"@en ;
+                       rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                       rdfs:label "accentedVowelsPattern"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#altCountingMetricalScheme
+:altCountingMetricalScheme rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:range xsd:string ;
+                           <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                           rdfs:comment "Alternative syllabic/moraic metrical schemae (e.g. long lines with caesura opposite to short lines)" ;
+                           rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                           rdfs:label "altCountingMetricalScheme"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#altPatterningMetricalScheme
+:altPatterningMetricalScheme rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty ;
+                             rdfs:range xsd:string ;
+                             <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                             rdfs:comment "Distribution of stresses/long syllables, but, for instance, with the addition of punctuation marks to present word boundaries in the line" ;
+                             rdfs:label "altPatterningMetricalScheme"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#altRhymeScheme
+:altRhymeScheme rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:range xsd:string ;
+                <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                rdfs:comment "An alternative rhyme scheme (usually in relation with an alternative metrical scheme)" ;
+                rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                rdfs:label "altRhymeScheme"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#clausulaScheme
+:clausulaScheme rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :StanzaPattern ;
+                rdfs:range xsd:string ;
+                <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                rdfs:comment "Pattern of clausulae, that is, the ending of a line determined by the number of unstressed syllables following the last stressed one."@en ;
+                rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                rdfs:label "clausulaScheme"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#countingMetricalScheme
+:countingMetricalScheme rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:range xsd:string ;
+                        <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                        <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                        rdfs:comment "Metrical scheme according to the number of syllables/morae" ;
+                        rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                        rdfs:label "countingMetricalScheme"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#ending
+:ending rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Rhyme ;
+        rdfs:range xsd:string ;
+        <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+        <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+        rdfs:comment "Contents from the last stressed vowel of the rhyme to its end"@en ;
+        rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+        rdfs:label "ending"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#finalConsonant
+:finalConsonant rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Rhyme ;
+                rdfs:range xsd:string ;
+                <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                rdfs:comment "Last consonant of rhyming word" ;
+                rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                rdfs:label "finalConsonant"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#grammaticalStressPattern
+:grammaticalStressPattern rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:range xsd:string ;
+                          <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                          rdfs:comment "Pattern based on disposition of the expected stresses according to grammar rules. This includes the distribution of weak and strong positions" ;
+                          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                          rdfs:label "grammaticalStressPattern"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasAnacrusis
+:hasAnacrusis rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:range xsd:boolean ;
+              <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+              <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+              rdfs:comment "If the line has one or more unstressed syllables at the beginning of a line of verse, before the reckoning of the normal meter begins" ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "hasAnacrusis"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasCaesura
+:hasCaesura rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:range xsd:boolean ;
+            <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+            rdfs:comment "Whether it contains any lines with a pause/break near its middle" ;
+            rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+            rdfs:label "hasCaesura"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm
+:hasMetaplasm rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:range xsd:boolean .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRefrain
+:hasRefrain rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :WorkPattern ;
+            rdfs:range xsd:boolean ;
+            <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+            <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+            rdfs:comment "Whether the work has a refrain" ;
+            rdfs:label "hasRefrain"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#initialPhonemesPattern
+:initialPhonemesPattern rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :LinePattern ;
+                        rdfs:range xsd:string ;
+                        <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                        rdfs:comment "Initial phonemes of each word in a line, in alphabetical order to show sound repetitions"@en ;
+                        rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                        rdfs:label "initialPhonemesPattern"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#initialPhonemesPatternByManner
+:initialPhonemesPatternByManner rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :LinePattern ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :initialPhonemesPatternByManner ;
+                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onDataRange xsd:string
+                                            ] ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "Initial phonemes of each word in a line represented by manner, in alphabetical order to show sound repetitions"@en ;
+                                rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                                rdfs:label "initialPhonemesPatternByManner"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#interStrophicRelations
+:interStrophicRelations rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :WorkPattern ;
+                        rdfs:range xsd:string ;
+                        <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                        <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                        rdfs:comment "Type of technique used to related stanzas by the repetition of sounds" ;
+                        rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                        rdfs:label "interStrophicRelations"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isCatalectic
+:isCatalectic rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Foot ;
+              rdfs:range xsd:boolean ;
+              <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+              rdfs:comment "Whether the instance at hand is the last foot of the line or hemistich and is lacking one syllable"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "isCatalectic"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEcho
+:isEcho rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Rhyme ;
+        rdfs:range xsd:boolean ;
+        <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+        <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+        rdfs:comment "Whether the word in a rhyming pair under analysis is the first one (false) or the second (true)"@en ;
+        rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+        rdfs:label "isEcho"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isHypermetre
+:isHypermetre rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :LinePattern ;
+              rdfs:range xsd:boolean ;
+              <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+              <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+              rdfs:comment "It has one or more syllables in addition to those found in a standard metrical unit or line of verse"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "isHypermetre"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isHypermetrical
+:isHypermetrical rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Foot ;
+                 rdfs:range xsd:boolean ;
+                 <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                 rdfs:comment "Whether the instance at hand is the last foot of the line or hemistich and it contains extra syllables"@en ;
+                 rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                 rdfs:label "isHypermetrical"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isHypometre
+:isHypometre rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :LinePattern ;
+             rdfs:range xsd:boolean ;
+             <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+             <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+             rdfs:comment "It has one or more syllables less than to those found in a standard metrical unit or line of verse"@en ;
+             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+             rdfs:label "isHypometre"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isIrregular
+:isIrregular rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Foot ;
+             rdfs:range xsd:boolean ;
+             <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+             rdfs:comment "Whether in comparison to the other lines, the current foot breaks a regular pattern"@en ;
+             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+             rdfs:label "isIrregular"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isIsometric
+:isIsometric rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :WorkPattern ;
+             rdfs:range xsd:boolean ;
+             <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+             <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+             rdfs:comment "Whether the work is monometric, that is, if all lines have the same metrical analysis" ;
+             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+             rdfs:label "isIsometric"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isIsostrophic
+:isIsostrophic rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :WorkPattern ;
+               rdfs:range xsd:boolean ;
+               <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+               <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+               rdfs:comment "Whether all stanzas are metrically equivalent" ;
+               rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+               rdfs:label "isIsostrophic"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isRegular
+:isRegular rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :LinePattern ;
+           rdfs:range xsd:boolean ;
+           <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+           <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+           rdfs:comment "Regular metrics"@en ;
+           rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+           rdfs:label "isRegular"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isUnissonant
+:isUnissonant rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :WorkPattern ;
+              rdfs:range xsd:boolean ;
+              <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+              <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+              rdfs:comment "Whether all stanzas have the same rhyme" ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "isUnissonant"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#label
+:label rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain :Rhyme ;
+       rdfs:range xsd:string ;
+       <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+       <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+       rdfs:comment "String used to identify the item at hand (usually, “a”, “b”, “c”, etc.)"@en ;
+       rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+       rdfs:label "label"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalNotes
+:metricalNotes rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:range xsd:string ;
+               <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+               <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+               rdfs:comment "Metrical commentary" ;
+               rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+               rdfs:label "metricalNotes"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSymbol
+:metricalSymbol rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Symbol ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Symbol use to define a feature in a metrical pattern"@en ;
+                rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                rdfs:label "metricalSymbol"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSymbolExplanation
+:metricalSymbolExplanation rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Symbol ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Meaning of the symbol used in a metrical pattern"@en ;
+                           rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                           rdfs:label "metricalSymbolExplanation"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalTypeDescription
+:metricalTypeDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :WorkPattern ;
+                         rdfs:range xsd:string ;
+                         <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                         <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                         rdfs:comment "Commentary on the categorisation attending to metrics" ;
+                         rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                         rdfs:label "metricalTypeDescription"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#numberOfFeet
+:numberOfFeet rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :LinePattern ;
+              rdfs:range xsd:integer ;
+              <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+              <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+              rdfs:comment "Number of feet"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "numberOfFeet"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#numberOfLines
+:numberOfLines rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :StanzaPattern ;
+               rdfs:range xsd:integer ;
+               <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+               <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+               rdfs:comment "Number of lines in item" ;
+               rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+               rdfs:label "numberOfLines"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#numberOfMorae
+:numberOfMorae rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Foot ;
+               rdfs:range xsd:integer ;
+               <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+               rdfs:comment "The number of morae the foot contains"@en ;
+               rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+               rdfs:label "numberOfMorae"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#numberOfStanzas
+:numberOfStanzas rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :WorkPattern ;
+                 rdfs:range xsd:integer ;
+                 <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                 <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                 rdfs:comment "Number of stanzas" ;
+                 rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                 rdfs:label "numberOfStanzas"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#numberOfSyllables
+:numberOfSyllables rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :LinePattern ;
+                   rdfs:range xsd:integer ;
+                   <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                   <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                   rdfs:comment "The exact number of syllables, that is, without paying attention to any metrical phenomena that may affect the counting"@en ;
+                   rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                   rdfs:label "numberOfSyllables"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#patterningMetricalScheme
+:patterningMetricalScheme rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:range xsd:string ;
+                          <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                          <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                          rdfs:comment "Metrical scheme for quantitative, tonal, accentual or accentual-syllabic metre" ;
+                          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                          rdfs:label "patterningMetricalScheme"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#phonemePattern
+:phonemePattern rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :LinePattern ;
+                rdfs:range xsd:string ;
+                <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                rdfs:comment "All phonemes in a line represented by their nearest written equivalents. They could be arranged in alphabetical order to show sound repetitions"@en ;
+                rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                rdfs:label "phonemePattern"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#phonemePatternByManner
+:phonemePatternByManner rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :LinePattern ;
+                        rdfs:range xsd:string ;
+                        <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                        <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                        rdfs:comment "All phonemes in a line represented by manner of articulation. They could be arranged in alphabetical order to show sound repetitions. The coding scheme presented in one of the databases stands for the different manners of articulation of consonants, and at the same time groups together front and back vowels"@en ;
+                        rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                        rdfs:label "phonemePatternByManner"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#phoneticTranscription
+:phoneticTranscription rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :LinePattern ;
+                       rdfs:range xsd:string ;
+                       <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                       <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                       rdfs:comment "Phonetic transcription"@en ;
+                       rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                       rdfs:label "phoneticTranscription"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#prefinalConsonants
+:prefinalConsonants rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Rhyme ;
+                    rdfs:range xsd:string ;
+                    <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                    <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                    rdfs:comment "Consonants between the stressed vowel and the last consonant"@en ;
+                    rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                    rdfs:label "prefinalConsonants"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeCategory
+:rhymeCategory rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Rhyme ;
+               rdfs:range xsd:string ;
+               <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+               <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+               rdfs:comment "Categorisation of the item at hand"@en ;
+               rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+               rdfs:label "rhymeCategory"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeGrapheme
+:rhymeGrapheme rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Rhyme ;
+               rdfs:range xsd:string ;
+               <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+               <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+               rdfs:comment "Grapheme that represents the rhyming sounds"@en ;
+               rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+               rdfs:label "rhymeGrapheme"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymePhoneme
+:rhymePhoneme rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Rhyme ;
+              rdfs:range xsd:string ;
+              <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+              <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+              rdfs:comment "Phonetic transcription of the rhyming sounds"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "rhymePhoneme"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeScheme
+:rhymeScheme rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:range xsd:string ;
+             <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+             <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+             rdfs:comment "A rhyme scheme is the pattern of rhymes at the end of each line of a poem or song. It is usually referred to by using letters to indicate which lines rhyme; lines designated with the same letter all rhyme with each other" ;
+             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+             rdfs:label "rhymeScheme"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeTypeProportion
+:rhymeTypeProportion rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :WorkPattern ;
+                     rdfs:range xsd:string ;
+                     <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                     <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                     rdfs:comment "Proportion of the feminine/masculine rhymes of the poem" ;
+                     rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                     rdfs:label "rhymeTypeProportion"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#scannedLine
+:scannedLine rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :LinePattern ;
+             rdfs:range xsd:string ;
+             <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+             <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+             rdfs:comment "A line metrically analysed, marked up in terms of syllable division and accent"@en ;
+             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+             rdfs:label "scannedLine"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vowelTypeScheme
+:vowelTypeScheme rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :LinePattern ;
+                 rdfs:range xsd:string ;
+                 <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                 <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
+                 rdfs:comment "Linguistic properties of the vowels of the line"@en ;
+                 rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                 rdfs:label "vowelTypeScheme"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Foot
+:Foot rdf:type owl:Class ;
+      rdfs:subClassOf <http://purl.org/linguistics/gold/Foot> ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :clausula ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                             owl:hasValue <http://postdata.linhd.uned.es/kos/clausula>
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ]
+                      ] ;
+      <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+      <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^xsd:dateTime ;
+      rdfs:comment "A unit of poetic meter consisting of stressed and unstressed syllables or long and short syllables in any of various set combinations"@en ;
+      rdfs:label "Foot"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#FootDivision
+:FootDivision rdf:type owl:Class ;
+              <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+              <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^xsd:dateTime ;
+              rdfs:comment "Unit smaller than Foot" ;
+              rdfs:label "FootDivision"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#LinePattern
+:LinePattern rdf:type owl:Class ;
+             rdfs:subClassOf :Pattern ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :feetType ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                    owl:hasValue <http://postdata.linhd.uned.es/kos/feet-type>
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :accentedVowels ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :altCountingMetricalScheme ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :altPatterningMetricalScheme ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :countingMetricalScheme ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :grammaticalStressPattern ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAnacrusis ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:boolean
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCaesura ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:boolean
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :metricalNotes ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :patterningMetricalScheme ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ;
+             <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+             <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^xsd:dateTime ;
+             rdfs:comment """The prosodic analysis using a Line as the unit of reference
+Eg.: The number of syllables of the Line"""@en ;
+             rdfs:label "LinePattern"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Metaplasm
+:Metaplasm rdf:type owl:Class ;
+           rdfs:comment """A figure of transformation or metaplasm is a figure of diction that consists of altering the writing or pronunciation of words without altering their meaning.
+Some examples are dieresis, syneresis, sinalefa or hiatus."""@en ;
+           rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+           rdfs:label "Metaplasm"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding
+:MetricalEncoding rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :metricalNotes ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ;
+                  <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+                  <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^xsd:dateTime ;
+                  rdfs:comment """The notation employed to represent a metrical pattern.
+Eg.: The definition of the plus sign to encode strong positions"""@en ;
+                  rdfs:label "MetricalEncoding"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern
+:Pattern rdf:type owl:Class .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme
+:Rhyme rdf:type owl:Class .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#RhymeMatch
+:RhymeMatch rdf:type owl:Class ;
+            rdfs:comment "Entity to define the correspondences between rhyming words"@en ;
+            rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+            rdfs:label "RhymeMatch"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#StanzaPattern
+:StanzaPattern rdf:type owl:Class ;
+               rdfs:subClassOf :Pattern ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :clausulaSchemeType ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:hasValue <http://postdata.linhd.uned.es/kos/clausulaScheme-type>
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :feetType ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:hasValue <http://postdata.linhd.uned.es/kos/feet-type>
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :metricalType ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:hasValue <http://postdata.linhd.uned.es/kos/metrical-type>
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :presentsRhymeMatching ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:hasValue <http://postdata.linhd.uned.es/kos/rhymeMatching-type>
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :altCountingMetricalScheme ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :altPatterningMetricalScheme ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :altRhymeScheme ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :countingMetricalScheme ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasCaesura ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:boolean
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :metricalNotes ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :patterningMetricalScheme ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :rhymeScheme ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ;
+               <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+               <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^xsd:dateTime ;
+               rdfs:comment """The prosodic analysis using a Stanza as the unit of reference
+Eg.: The number of lines of a Stanza or its categorisation according to metrics (such as “quatrain”)"""@en ;
+               rdfs:label "StanzaPattern"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Symbol
+:Symbol rdf:type owl:Class ;
+        rdfs:comment "Each element of the notation used to describe a metrical pattern"@en ;
+        rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+        rdfs:label "Symbol"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#WorkPattern
+:WorkPattern rdf:type owl:Class ;
+             rdfs:subClassOf :Pattern ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :metricalType ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                    owl:hasValue <http://postdata.linhd.uned.es/kos/metrical-type>
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :presentsRhymeMatching ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                    owl:hasValue <http://postdata.linhd.uned.es/kos/rhymeMatching-type>
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :altCountingMetricalScheme ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :altPatterningMetricalScheme ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :altRhymeScheme ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :countingMetricalScheme ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :grammaticalStressPattern ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAnacrusis ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:boolean
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCaesura ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:boolean
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :metricalNotes ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :patterningMetricalScheme ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :rhymeScheme ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ;
+             <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
+             <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^xsd:dateTime ;
+             rdfs:comment """The prosodic analysis using a Redaction as the unit of reference
+Eg.: The complete distribution of accented syllables of a work"""@en ;
+             rdfs:label "WorkPattern"@en .
+
+
+###  http://purl.org/linguistics/gold/Foot
+<http://purl.org/linguistics/gold/Foot> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://postdata.linhd.uned.es/kos/clausula
+<http://postdata.linhd.uned.es/kos/clausula> rdf:type owl:NamedIndividual ,
+                                                      <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/clausulaScheme-type
+<http://postdata.linhd.uned.es/kos/clausulaScheme-type> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/feet-type
+<http://postdata.linhd.uned.es/kos/feet-type> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/foot-type
+<http://postdata.linhd.uned.es/kos/foot-type> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/footUnit-type
+<http://postdata.linhd.uned.es/kos/footUnit-type> rdf:type owl:NamedIndividual ,
+                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/metaplasm-type
+<http://postdata.linhd.uned.es/kos/metaplasm-type> rdf:type owl:NamedIndividual .
+
+
+###  http://postdata.linhd.uned.es/kos/metrical-category
+<http://postdata.linhd.uned.es/kos/metrical-category> rdf:type owl:NamedIndividual ,
+                                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/metrical-complexity
+<http://postdata.linhd.uned.es/kos/metrical-complexity> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/metrical-context
+<http://postdata.linhd.uned.es/kos/metrical-context> rdf:type owl:NamedIndividual ,
+                                                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/metrical-type
+<http://postdata.linhd.uned.es/kos/metrical-type> rdf:type owl:NamedIndividual ,
+                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/rhymeDisposition-type
+<http://postdata.linhd.uned.es/kos/rhymeDisposition-type> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/rhymeMatching-type
+<http://postdata.linhd.uned.es/kos/rhymeMatching-type> rdf:type owl:NamedIndividual ,
+                                                                <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://postdata.linhd.uned.es/kos/versification-type
+<http://postdata.linhd.uned.es/kos/versification-type> rdf:type owl:NamedIndividual ,
+                                                                <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP104_subject_to> rdfs:comment """This property associates a publication, i.e. an instance of F3 Manifestation Product Type, with an instance of E30 Right, which applies to all exemplars of that publication, as long as they are recognised as exemplars of that publication.
+The rights covered by this property may include: acquisition or access authorisation; terms of availability; access restrictions on the Manifestation Product Type; etc.
+"""@en ;
+                                                                rdfs:label "subject to"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP104i_applies_to> rdfs:comment """
+"""@en ;
+                                                                 rdfs:label "applies to"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP105_right_held_by> rdfs:comment """This property associates a publication, i.e. an instance of F3 Manifestation Product Type, with an instance of E39 Actor, who holds an instance of E30 Right on all exemplars of that publication, as long as they are recognised as exemplars of that publication.
+"""@en ;
+                                                                   rdfs:label "right held by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP105i_right_on> rdfs:comment """
+"""@en ;
+                                                               rdfs:label "right on"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP2_should_have_type> rdfs:comment """This property associates a publication, i.e. an instance of F3 Manifestation Product Type, with an instance of E55 Type, which all exemplars of that publication should belong to, as long as they are recognised as exemplars of that publication. Typically, this property is observed on one exemplar of a publication, and extrapolated to all other exemplars of the same publication. This logical inference is an induction along the path that can be modelled as: F3 Manifestation Product Type R7i has example F5 Item P41i was classified by E17 Type Assignment P42 assigned E55 Type.
+It can happen that a given exemplar, or subset of exemplars, originally produced, or intended to be produced, with that characteristic, accidentally lacks it. This fact should be recorded as a property of F5 Item, and not of F3 Manifestation Product Type.
+"""@en ;
+                                                                    rdfs:label "should have type"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP2i_should_be_type_of> rdfs:comment """
+"""@en ;
+                                                                      rdfs:label "should be type of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP43_should_have_dimension> rdfs:comment """This property associates a publication, i.e. an instance of F3 Manifestation Product Type, with an instance of E54 Dimension, which all exemplars of that publication should have, as long as they are recognised as exemplars of that publication. Typically, this property is observed on one exemplar of a publication, and extrapolated to all other exemplars of the same publication. This logical inference is an induction along the path that can be modelled as: F3 Manifestation Product Type R7i has example F5 Item P39i was measured by E16 Measurement P40 observed dimension E54 Dimension.
+It can happen that a given exemplar, or subset of exemplars, originally produced, or intended to be produced, with that characteristic, accidentally lacks it. This fact should be recorded as a property of F5 Item, and not of F3 Manifestation Product Type.
+"""@en ;
+                                                                          rdfs:label "should have dimension"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP43i_should_be_dimension_of> rdfs:comment """
+"""@en ;
+                                                                            rdfs:label "should be dimension of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP45_should_consist_of> rdfs:comment """This property associates a publication, i.e. an instance of F3 Manifestation Product Type, with an instance of E57 Material, which all exemplars of that publication should consist of, as long as they are recognised as exemplars of that publication. Typically, this property is observed on one exemplar of a publication, and extrapolated to all other exemplars of the same publication. This logical inference is an induction along the path that can be modelled as: F3 Manifestation Product Type R7i has example F5 Item P41i was classified by E17 Type Assignment P42 assigned E57 Material.
+It can happen that a given exemplar, or subset of exemplars, originally produced, or intended to be produced, with that characteristic, accidentally lacks it. This fact should be recorded as a property of F5 Item, and not of F3 Manifestation Product Type.
+"""@en ;
+                                                                      rdfs:label "should consist of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP45i_should_be_incorporated_in> rdfs:comment """
+"""@en ;
+                                                                               rdfs:label "should be incorporated in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP46_should_be_composed_of> rdfs:comment """This property associates an instance of F3 Manifestation Product Type which prescribes that all its Items will contain as parts an Item of another instance of F3 Manifestation Product Type with that instance of F3 Manifestation Product Type.
+"""@en ;
+                                                                          rdfs:label "should be composed of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLP46i_may_form_part_of> rdfs:comment """
+"""@en ;
+                                                                      rdfs:label "may form part of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLR6_should_carry> rdfs:comment """This property associates a publication, i.e. an instance of F3 Manifestation Product Type, with an instance of F24 Publication Expression, which all exemplars of that publication should carry, as long as they are recognised as complete exemplars of that publication. Typically, this property is observed on one exemplar of a publication, and extrapolated to all other exemplars of the same publication. This logical inference is an induction along the path that can be modelled as: F3 Manifestation Product Type R7i has example F5 Item R6 carries F24 Publication Expression.
+It can happen that a given exemplar, or a subset of exemplars, originally produced, or intended to be produced with that characteristic, accidentally lacks part of the publication expression. This fact should be recorded as a property of F5 Item, and not of F3 Manifestation Product Type.
+"""@en ;
+                                                                rdfs:label "should carry"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/CLR6i_should_be_carried_by> rdfs:comment """
+"""@en ;
+                                                                         rdfs:label "should be carried by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R10_has_member> rdfs:comment """This property associates an instance of F15 Complex Work with an instance of F1 Work that forms part of it. 
+"""@en ;
+                                                             rdfs:label "has member"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R10i_is_member_of> rdfs:comment """
+"""@en ;
+                                                                rdfs:label "is member of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R11_has_issuing_rule> rdfs:comment """This property associates an instance of F18 Serial Work with the instance of E29 Design or Procedure that specifies the issuing policy planned by this Work, such as sequencing pattern, expected frequency and expected regularity.
+This property is a shortcut of the full path: F18 Serial Work R23i was realised through F30 Publication Event P16 used specific object E29 Design or Procedure.
+"""@en ;
+                                                                   rdfs:label "has issuing rule"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R11i_is_issuing_rule_of> rdfs:comment """
+"""@en ;
+                                                                      rdfs:label "is issuing rule of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R12_is_realised_in> rdfs:comment """This property associates an instance of F20 Performance Work with an instance of F25 Performance Plan that consists of signs (words, figures, etc.) which express the directions the instance of F20 Performance Work consists of.
+"""@en ;
+                                                                 rdfs:label "is realised in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R12i_realises> rdfs:comment """
+"""@en ;
+                                                            rdfs:label "realises"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R13_is_realised_in> rdfs:comment """This property associates an instance of F21 Recording Work with an instance of F26 Recording realising the instance of F21 Recording Work.
+This is a shortcut of the more elaborated path through R22 was realised through, F29 Recording Event and R21 created, which should be used when information about the recording event is available.
+"""@en ;
+                                                                 rdfs:label "is realised in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R13i_realises> rdfs:comment """
+"""@en ;
+                                                            rdfs:label "realises"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R15_has_fragment> rdfs:comment """This property associates the fragment of an expression and the expression of which it is a fragment.
+"""@en ;
+                                                               rdfs:label "has fragment"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R15i_is_fragment_of> rdfs:comment """
+"""@en ;
+                                                                  rdfs:label "is fragment of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R16_initiated> rdfs:comment """This property associates the first conception of a work and the work itself that ensued from a given initial idea.
+It marks the origin of the causality chain that results in a work’s coming into existence.
+"""@en ;
+                                                            rdfs:label "initiated"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R16i_was_initiated_by> rdfs:comment """
+"""@en ;
+                                                                    rdfs:label "was initiated by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R17_created> rdfs:comment """This property associates the expression that was first externalised during a particular creation event with that particular creation event.
+"""@en ;
+                                                          rdfs:label "created"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R17i_was_created_by> rdfs:comment """
+"""@en ;
+                                                                  rdfs:label "was created by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R18_created> rdfs:comment """This property associates an instance of F28 Expression Creation with the first physical objects in which the resulting instance of F2 Expression was embodied.
+"""@en ;
+                                                          rdfs:label "created"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R18i_was_created_by> rdfs:comment """
+"""@en ;
+                                                                  rdfs:label "was created by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R19_created_a_realization_of> rdfs:comment """This property associates an instance of F28 Expression Creation with the corresponding instance of F14 Individual Work or an instance of F15 Complex Work of which the corresponding instance of F14 Individual Work is a member.
+"""@en ;
+                                                                           rdfs:label "created a realization of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R19i_was_realised_through> rdfs:comment """
+"""@en ;
+                                                                        rdfs:label "was realised through"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R1_is_logical_successor_of> rdfs:comment """This property associates an instance of F1 Work which logically continues the content of another instance of F1 Work with the latter.
+"""@en ;
+                                                                         rdfs:label "is logical successor of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R1i_has_successor> rdfs:comment """
+"""@en ;
+                                                                rdfs:label "has successor"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R20_recorded> rdfs:comment """This property associates an instance of F29 Recording Event with the instance of E2 Temporal Entity which was captured.
+"""@en ;
+                                                           rdfs:label "recorded"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R20i_was_recorded_through> rdfs:comment """
+"""@en ;
+                                                                        rdfs:label "was recorded through"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R21_created> rdfs:comment """This property associates an instance of F29 Recording Event with the instance of F26 Recording that was created.
+"""@en ;
+                                                          rdfs:label "created"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R21i_was_created_through> rdfs:comment """
+"""@en ;
+                                                                       rdfs:label "was created through"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R22_created_a_realization_of> rdfs:comment """This property associates an instance of F29 Recording Event with the instance of F21 Recording Work it realised.
+"""@en ;
+                                                                           rdfs:label "created a realization of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R22i_was_realised_through> rdfs:comment """
+"""@en ;
+                                                                        rdfs:label "was realised through"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R23_created_a_realization_of> rdfs:comment """This property associates an instance of F30 Publication Event with the instance of F19 Publication Work it realised.
+"""@en ;
+                                                                           rdfs:label "created a realization of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R23i_was_realised_through> rdfs:comment """
+"""@en ;
+                                                                        rdfs:label "was realised through"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R24_created> rdfs:comment """This property associates the instance of F24 Publication Expression that was created during a particular F30 Publication Event with that F30 Publication Event.
+"""@en ;
+                                                          rdfs:label "created"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R24i_was_created_through> rdfs:comment """
+"""@en ;
+                                                                       rdfs:label "was created through"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R25_performed> rdfs:comment """This property associates an instance of F31 Performance with the instance of F25 Performance Plan to which all those participating in the performance were supposed to conform.
+"""@en ;
+                                                            rdfs:label "performed"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R25i_was_performed_in> rdfs:comment """
+"""@en ;
+                                                                    rdfs:label "was performed in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R26_produced_things_of_type> rdfs:comment """This property associates an instance of F32 Carrier Production Event with the instance of F3 Manifestation Product Type it produced items of.
+"""@en ;
+                                                                          rdfs:label "produced things of type"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R26i_was_produced_by> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was produced by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R27_used_as_source_material> rdfs:comment """This property associates an instance of F32 Carrier Production Event with the set of signs provided by the publisher to be carried by all of the produced items.
+"""@en ;
+                                                                          rdfs:label "used as source material"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R27i_was_used_by> rdfs:comment """
+"""@en ;
+                                                               rdfs:label "was used by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R28_produced> rdfs:comment """This property associates an instance of F32 Carrier Production Event with any one of the produced items (i.e., the instances of F5 Item or F53 Material Copy).
+"""@en ;
+                                                           rdfs:label "produced"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R28i_was_produced_by> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was produced by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R29_reproduced> rdfs:comment """This property associates an instance of F33 Reproduction Event with an instance of E84 Information Carrier it reproduces.
+"""@en ;
+                                                             rdfs:label "reproduced"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R29i_was_reproduced_by> rdfs:comment """
+"""@en ;
+                                                                     rdfs:label "was reproduced by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R2_is_derivative_of> rdfs:comment """This property associates an instance of F1 Work which modifies the content of another instance of F1 Work with the latter. The property R2.1 has type of this property allows for specifying the kind of derivation, such as adaptation, summarisation etc.
+"""@en ;
+                                                                  rdfs:label "is derivative of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R2i_has_derivative> rdfs:comment """
+"""@en ;
+                                                                 rdfs:label "has derivative"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R30_produced> rdfs:comment """This property associates an instance of F33 Reproduction Event with an instance of E84 Information Carrier it produces.
+"""@en ;
+                                                           rdfs:label "produced"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R30i_was_produced_by> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was produced by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R31_is_reproduction_of> rdfs:comment """This property associates an instance of E84 Information Carrier which is a reproduction of another instance of E84 Information Carrier with the latter. It is considered that a reproduction of multiple originals resulting in a single product requires a merging of those objects prior to the reproduction. Therefore an Information Carrier is regarded to be a reproduction of one and only one original. This property is a shortcut of the more fully developed path from E84 Information Carrier through R30 produced (was produced by), F33 Reproduction Event R29 reproduced (was reproduced by) to E84 Information Carrier.
+"""@en ;
+                                                                     rdfs:label "is reproduction of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R31i_has_reproduction> rdfs:comment """
+"""@en ;
+                                                                    rdfs:label "has reproduction"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R32_is_warranted_by> rdfs:comment """This property associates an instance of F35 Nomen Use Statement with an instance of F52 Name Use Activity which provides evidence for the use of the particular nomen in the stated sense. The association between this name use activity and a source for it may be described by the property P70 documents (is documented in).
+"""@en ;
+                                                                  rdfs:label "is warranted by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R32i_warrants> rdfs:comment """
+"""@en ;
+                                                            rdfs:label "warrants"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R34_has_validity_period> rdfs:comment """This property associates an instance of F34 KOS with the instance of E52 Time-Span describing the period for which the particular KOS Expression was regarded as valid by its maintainers. Each change of validity status of a nomen use statement within a KOS should be associated with a release change of the KOS. The individual time-span of a validity state of a nomen would be the union of the time-spans of the KOS in which the Nomen was declared to have the particular validity status (provisional, accepted, obsolete etc...).
+"""@en ;
+                                                                      rdfs:label "has validity period"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R34i_is_validity_period_of> rdfs:comment """
+"""@en ;
+                                                                         rdfs:label "is validity period of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R35_specified_by> rdfs:comment """This property associates an instance of F35 Nomen Use Statement with an instance of F34 KOS in which the Nomen Use Statement has a given status. The property R35.1 allows for specifying the particular status of the nomen use statement within the KOS. An instance of R35 is specified by should have only one status.
+"""@en ;
+                                                               rdfs:label "specified by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R35i_specifies> rdfs:comment """
+"""@en ;
+                                                             rdfs:label "specifies"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R36_uses_script_conversion> rdfs:comment """This property associates an instance of F35 Nomen Use Statement with the instance of F36 Script Conversion that was used to create the Nomen referred to in the Nomen Use Statement. The source of this conversion may or may not be explicitly mentioned. Is shortcut of: F35 Nomen Use Statement R17 was created by (created) F28 Expression Creation P33 used specific technique (was used by) E29 Design or Procedure.
+"""@en ;
+                                                                         rdfs:label "uses script conversion"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R36i_is_script_conversion_used_in> rdfs:comment """This property associates an instance of F35 Nomen Use Statement with the instance of F12 Nomen for which it declares usage.
+"""@en ;
+                                                                                rdfs:label "is script conversion used in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R37_states_as_nomen> rdfs:comment """
+"""@en ;
+                                                                  rdfs:label "states as nomen"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R37i_is_stated_as_nomen_in> rdfs:comment """
+"""@en ;
+                                                                         rdfs:label "is stated as nomen in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R38_refers_to_thema> rdfs:comment """This property associates an instance of F35 Nomen Use Statement with the instance of E1 CRM Entity for which it declares the usage of a nomen.
+"""@en ;
+                                                                  rdfs:label "refers to thema"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R38i_is_thema_of> rdfs:comment """
+"""@en ;
+                                                               rdfs:label "is thema of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R39_is_intended_for> rdfs:comment """This property associates an instance of F35 Nomen Use Statement with an instance of E74 Group which is the target audience for which the associated nomen use is intended. To indicate that the associated nomen is declared as preferred in all contexts, the instance of E74 Group is ‘mankind’.
+"""@en ;
+                                                                  rdfs:label "is intended for"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R39i_is_target_audience_in> rdfs:comment """
+"""@en ;
+                                                                         rdfs:label "is target audience in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R3_is_realised_in> rdfs:comment """This property associates an instance of F22 Self-Contained Expression with an instance of F1 Work.
+This property expresses the association that exists between an expression (F22) and the work that this expression conveys. The semantics of the association will be different depending on what specific subtype of F1 Work the work is an instance of. If the work is an instance of F14 Individual Work, the F22 Self-Contained Expression completely conveys the individual work. If the work is an instance of F15 Complex Work, the F22 Self-Contained Expression conveys an alternative member of the complex work.
+Our factual knowledge of how a given work is realised into an expression is often limited and this property makes it possible to express the association between instances of F22 Self-Contained Expression and the work it conveys without using the more developed paths.
+The property R3.1 has type: E55 Type allows for specifying the role played by the referred to expression in the overall bibliographic history of the work (e.g., ‘progenitor expression’, on which all other expressions of the same work are based; ‘reference for canonical citations’, in the sense of the HuCit ontology developed by Matteo Romanello and Michele Pasin; ‘earliest draft’, ‘intermediate draft’, ‘final clean draft’, ‘princeps edition’, etc.).
+"""@en ;
+                                                                rdfs:label "is realised in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R3i_realises> rdfs:comment """
+"""@en ;
+                                                           rdfs:label "realises"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R40_has_representative_expression> rdfs:comment """This property identifies an instance of F22 Self-Contained Expression that has been chosen as the most characteristic expression of the instance of F1 Work of which it is an expression. There is no other semantic implication to this notion of being characteristic than to be an adequate candidate to uniquely identify the Work realized by it. Prototypically, this is the instance of F22 Self-Contained Expression that is deemed characteristic of an instance of F15 Complex Work.
+Typically, any expression that is not regarded as “representative” for the work it expresses, would require a controlled access point, with qualifiers specifying the differences between that expression and a representative expression, although this may not always be done in practice. The title of a Work may not be one taken from a representative expression.
+A given work can have more than one representative expression, provided the differences between these expressions are not deemed “substantial.” If the anticipated needs of users are not considered to call for bibliographic distinctions between variant expressions of a work, then even expressions that differ significantly from each other can be regarded as equally representative for the work. (See FRBR: Final Report, p. 19-20).
+A given expression can be deemed representative for a work with regard to some of its aspects (e.g., the text contained in an edition the title proper of which reads ‘The tragicall historie of HAMLET Prince of Denmarke’, and the language of that text), and not representative for it with regard to some other aspects (e.g., the title proper ‘The tragicall historie of HAMLET Prince of Denmarke’ itself, which, being different from the title that is regarded as “representative” for Shakespeare’s work, will require the use of a controlled access point).
+R40 has representative expression is a shortcut of the more developed path F1 Work R50i was assigned by F42 Representative Expression Assignment R51 assigned F2 Expression.
+
+"""@en ;
+                                                                                rdfs:label "has representative expression"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R40i_is_representative_expression_for> rdfs:comment """
+"""@en ;
+                                                                                    rdfs:label "is representative expression for"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R41_has_rep_manifestation_product_type> rdfs:comment """This property identifies an instance of F3 Manifestation Product Type that has been chosen as the most characteristic Manifestation Product Type of the instance of F2 Expression of which it is a manifestation.
+Identifying an instance of F3 Manifestation Product Type that is representative for an instance of F2 Expression makes it possible in turn to identify an instance of F2 Expression that is representative for an instance of F1 Work, and to decide what should be regarded as the title of the work.
+The title of an Expression may not be one taken from a representative Manifestation Product Type or Manifestation Singleton.
+A given expression can have more than one Representative Manifestation Product Type.
+R41 has representative manifestation product type is a shortcut of the more developed path F2 Expression R48i was assigned by F41 Representative Manifestation Assignment R49 assigned F3 Manifestation Product Type.
+
+"""@en ;
+                                                                                     rdfs:label "has rep manifestation product type"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R41i_is_rep_manifestation_product_type_for> rdfs:comment """
+"""@en ;
+                                                                                         rdfs:label "is rep manifestation product type for"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R42_is_representative_manifestation_singleton_for> rdfs:comment """This property identifies an instance of Manifestation Singleton that has been declared as the unique representative for an instance of F2 Expression by some bibliographic agency.
+This property identifies an instance of F4 Manifestation Singleton that has been chosen as the most characteristic Manifestation Singleton of the instance of F2 Expression of which it is a manifestation.
+Identifying an instance of F4 Manifestation Singleton that is representative for an instance of F2 Expression makes it possible in turn to identify an instance of F2 Expression that is representative for an instance of F1 Work, and to decide what should be regarded as the title of the work.
+The title of an Expression may not be one taken from a representative Manifestation Product Type or Manifestation Singleton.
+A given expression can have more than one representative Manifestation Singleton.
+It is a shortcut for the more developed path: F2 Expression R48i was assigned by F41 Representative Manifestation Assignment R53 assigned F4 Manifestation Singleton.
+
+"""@en ;
+                                                                                                rdfs:label "is representative manifestation singleton for"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R42i_has_representative_manifestation_singleton> rdfs:comment """
+"""@en ;
+                                                                                              rdfs:label "has representative manifestation singleton"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R43_carried_out_by> rdfs:comment """This property associates a bibliographic agency (represented by one or more of its cataloguers) and the assigning of which Manifestation (i.e., which instance of F3 Manifestation Product Type or F4 Manifestation Singleton) is representative for a given expression.
+In cataloguing practice, such a relationship is usually just implicit. However, it can become explicit, for example when a bibliographic agency creates an authority record for a given work and fills the “Source” field with information about the publication that contains the expression that was used by the bibliographic agency to establish the controlled access point for the work realised in that expression.
+"""@en ;
+                                                                 rdfs:label "carried out by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R43i_performed> rdfs:comment """
+"""@en ;
+                                                             rdfs:label "performed"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R44_carried_out_by> rdfs:comment """This property associates a bibliographic agency (represented by one or more of its cataloguers) and the assigning of which expression is representative for a given Work.
+In cataloguing practice, such a relationship is usually just implicit. However, it can become explicit, for example when a bibliographic agency creates an authority record for a given work and fills the “Source” field with information about the publication that contains the expression that was used by the bibliographic agency to establish the controlled access point for the work realised in that expression.
+
+"""@en ;
+                                                                 rdfs:label "carried out by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R44i_performed> rdfs:comment """
+"""@en ;
+                                                             rdfs:label "performed"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R45_assigned_to> rdfs:comment """This property identifies the entity to which an actor, such as a bibliographic agency, assigned an instance of F13 Identifier.
+"""@en ;
+                                                              rdfs:label "assigned to"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R45i_was_assigned_by> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was assigned by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R46_assigned_to> rdfs:comment """This property associates the instance of F13 Identifier assigned to an instance of E1 CRM Entity and the event of assigning it.
+"""@en ;
+                                                              rdfs:label "assigned to"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R46i_was_assigned_by> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was assigned by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R48_assigned_to> rdfs:comment """This property associates the event of assigning a representative instance of F3 Manifestation Product Type or F4 Manifestation Singleton with the expression to which it was assigned.
+"""@en ;
+                                                              rdfs:label "assigned to"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R48i_was_assigned_by> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was assigned by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R49_assigned> rdfs:comment """This property associates the event of assigning a representative instance of F3 Manifestation Product Type with the F3 Manifestation Product Type which has been assigned.
+"""@en ;
+                                                           rdfs:label "assigned"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R49i_was_assigned_by> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was assigned by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R4_carriers_provided_by> rdfs:comment """This property associates a publication, i.e. an instance of F3 Manifestation Product Type, with an instance of F2 Expression, which all exemplars of that publication should carry, as long as they are recognised as complete exemplars of that publication. Typically, this property is observed on one exemplar of a publication, and extrapolated to all other exemplars of the same publication.
+This property is a shortcut of: F2 Expression P165i is incorporated in F24 Publication Expression CLR6i should be carried by F3 Manifestation Product Type.
+"""@en ;
+                                                                      rdfs:label "carriers provided by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R4i_comprises_carriers_of> rdfs:comment """
+"""@en ;
+                                                                        rdfs:label "comprises carriers of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R50_assigned_to> rdfs:comment """This property associates the event of assigning a representative instance of F2 Expression with the instance of F15 Complex Work to which it was assigned.
+"""@en ;
+                                                              rdfs:label "assigned to"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R50i_was_assigned_by> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was assigned by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R51_assigned> rdfs:comment """This property associates the event of assigning a representative instance of F2 Expression with the F2 Expression which has been assigned.
+"""@en ;
+                                                           rdfs:label "assigned"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R51i_was_assigned_by> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was assigned by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R52_used_rule> rdfs:comment """This property associates the event of assigning an instance of F13 Identifier with the instructions followed by an actor, such as a Bibliographic Agency, in creating that identifier.
+"""@en ;
+                                                            rdfs:label "used rule"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R52i_was_the_rule_used_in> rdfs:comment """
+"""@en ;
+                                                                        rdfs:label "was the rule used in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R53_assigned> rdfs:comment """This property associates the event of assigning a representative instance of F4 Manifestation Singleton with the F4 Manifestation Singleton which has been assigned.
+"""@en ;
+                                                           rdfs:label "assigned"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R53i_was_assigned_by> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was assigned by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R54_has_nomen_language> rdfs:comment """This property associates an instance of F35 Nomen Use Statement with an instance of E56 Language which is a target language for the associated nomen use.
+"""@en ;
+                                                                     rdfs:label "has nomen language"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R54i_is_language_of_nomen_in> rdfs:comment """
+"""@en ;
+                                                                           rdfs:label "is language of nomen in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R55_has_nomen_form> rdfs:comment """This property associates an instance of F35 Nomen Use Statement with the instance of E55 Type that characterizes the Nomen referred to in the Nomen Use Statement, such as abbreviation, full name etc. In the case of abbreviations, the source of this form may or may not be explicitly mentioned.
+"""@en ;
+                                                                 rdfs:label "has nomen form"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R55i_is_nomen_form_in> rdfs:comment """
+"""@en ;
+                                                                    rdfs:label "is nomen form in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R56_has_related_use> rdfs:comment """This property associates an instance of F35 Nomen Use Statement with another instance of F35 Nomen Use Statement which has a related use in some context, such as alternative, lexical variant, replacing former use etc. The property R56.1 allows for specifying the particular kind of the nomen use statement relationship.
+"""@en ;
+                                                                  rdfs:label "has related use"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R56i_is_related_use_for> rdfs:comment """
+"""@en ;
+                                                                      rdfs:label "is related use for"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R57_is_based_on> rdfs:comment """This property associates an instance of F38 Character with an instance of E39 Actor that the character is motivated by or is intended to represent. An instance of F38 Character may be based on a combination of features taken from several actors. This property is a shortcut of the more fully developed path from E28 Conceptual Object, restricted to F38 Character, through the inverse of P94 has created (was created by), E65 Creation P17 was motivated by (motivated) to E1 CRM Entity restricted to E39 Actor.
+"""@en ;
+                                                              rdfs:label "is based on"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R57i_is_basis_for> rdfs:comment """
+"""@en ;
+                                                                rdfs:label "is basis for"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R58_has_fictional_member> rdfs:comment """This property associates an instance of F38 Character representing a group with another instance of F38 Character that is presented in relevant fiction as a member of the fictional group.
+"""@en ;
+                                                                       rdfs:label "has fictional member"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R58i_is_fictional_member_of> rdfs:comment """
+"""@en ;
+                                                                          rdfs:label "is fictional member of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R59_had_typical_subject> rdfs:comment """This property associates an instance of F51 Pursuit with the instance of E1 CRM Entity that is the typical subject of the associated activity, such as an area of expertise in which the actor is engaged or was engaged.
+"""@en ;
+                                                                      rdfs:label "had typical subject"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R59i_was_typical_subject_of> rdfs:comment """
+"""@en ;
+                                                                          rdfs:label "was typical subject of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R5_has_component> rdfs:comment """This property associates an F2 Expression X with a structural component Y that conveys in itself the complete concept of a work that is member of (R10) the overall work realized by X.
+It does not cover the relationship that exists between pre-existing expressions that are re-used in a new, larger expression and that new, larger expression. Such a relationship is modelled by P165 incorporates.
+"""@en ;
+                                                               rdfs:label "has component"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R5i_is_component_of> rdfs:comment """
+"""@en ;
+                                                                  rdfs:label "is component of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R60_used_to_use_language> rdfs:comment """This property associates an instance of F51 Pursuit with the instance of E56 Language that was characteristically used for the products of the associated activity.
+The property R60.1 has type of use allows for specifying a particular form of use.
+"""@en ;
+                                                                       rdfs:label "used to use language"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R60i_was_language_used_by> rdfs:comment """
+"""@en ;
+                                                                        rdfs:label "was language used by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R61_occured_in_kind_of_context> rdfs:comment """This property associates an instance of F52 Name Use Activity with the instance of E55 Type that characterises the kind of role or context within which the associated name was used.
+"""@en ;
+                                                                             rdfs:label "occured in kind of context"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R61i_was_kind_of_context_for> rdfs:comment """
+"""@en ;
+                                                                           rdfs:label "was kind of context for"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R62_was_used_for_membership_in> rdfs:comment """This property associates an instance of F52 Name Use Activity with the instance of E74 Group that characterises the context within which the associated name was used for membership in that group.
+"""@en ;
+                                                                             rdfs:label "was used for membership in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R62i_was_context_for> rdfs:comment """
+"""@en ;
+                                                                   rdfs:label "was context for"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R63_named> rdfs:comment """This property associates an instance of F52 Name Use Activity with the instance of E1 CRM Entity that the associated name was used for.
+"""@en ;
+                                                        rdfs:label "named"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R63i_was_named_by> rdfs:comment """
+"""@en ;
+                                                                rdfs:label "was named by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R64_used_name> rdfs:comment """This property associates an instance of F52 Name Use Activity with the instance of E41 Appellation that was used for the associated entity.
+"""@en ;
+                                                            rdfs:label "used name"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R64i_was_name_used_by> rdfs:comment """
+"""@en ;
+                                                                    rdfs:label "was name used by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R65_recorded_aspects_of> rdfs:comment """This property associates an instance of F29 Recording Event with an instance of E18 Physical Thing some of whose features, at the time of recording, were recorded in that process.
+"""@en ;
+                                                                      rdfs:label "recorded aspects of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R65i_had_aspects_recorded_through> rdfs:comment """
+"""@en ;
+                                                                                rdfs:label "had aspects recorded through"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R66_included_performed_version_of> rdfs:comment """This property associates an instance of F31 Performance with a product of the mind that was performed in the course of that instance of F31 Performance.
+According to the level of knowledge available about the performance, the range of this property can actually be specialised as either an instance of F1 Work (if nothing is known as to which specific expression of the work was performed), or of F2 Expression (if there is a reasonable amount of certainty as to which specific expression—e.g., a well identified translation of a play—of the work was performed).
+In addition to being a subproperty of P16 used specific object (was used for), this property also is a shortcut of the fully developed path that goes from F31 Performance to F1 Work through: R25 performed F25 Performance Plan P165 incorporates F22 Self-Contained Expression R3i realises. In this fully developed path, the specific instance of F22 Self-Contained Expression can be precisely identified and described for its own sake, or it can just be known to have necessarily existed.
+
+"""@en ;
+                                                                                rdfs:label "included performed version of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R66i_had_a_performed_version_through> rdfs:comment """
+"""@en ;
+                                                                                   rdfs:label "had a performed version through"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R6_carries> rdfs:comment """This property associates an instance of F54 Utilised Information Carrier with the unique instance of F24 Publication Expression it carries.
+"""@en ;
+                                                         rdfs:label "carries"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R6i_is_carried_by> rdfs:comment """
+"""@en ;
+                                                                rdfs:label "is carried by"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R7_is_example_of> rdfs:comment """This property associates a publication with one of its exemplars.
+It is a shortcut of the more developed path: F5 Item R28i was produced by F32 Carrier Production R26 produced things of type (was produced by): F3 Manifestation Product Type.
+"""@en ;
+                                                               rdfs:label "is example of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R7i_has_example> rdfs:comment """
+"""@en ;
+                                                              rdfs:label "has example"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R8_consists_of> rdfs:comment """This property associates an instance of F13 Identifier with one of the non-syntactic instances of E90 Symbolic Object which form part of it.
+"""@en ;
+                                                             rdfs:label "consists of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R8i_forms_part_of> rdfs:comment """
+"""@en ;
+                                                                rdfs:label "forms part of"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R9_is_realised_in> rdfs:comment """This property associates an F14 Individual Work with the unique F22 Self-Contained Expression that completely conveys it.
+It is a shortcut for the more developed path: F14 Individual Work R19i was realised through F28 Expression Creation R17 created F22 Self-Contained Expression.
+"""@en ;
+                                                                rdfs:label "is realised in"@en .
+
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/R9i_realises> rdfs:comment """
+"""@en ;
+                                                           rdfs:label "realises"@en .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
