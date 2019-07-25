@@ -7,6 +7,7 @@
 @base <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> .
 
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> rdf:type owl:Ontology ;
+                                                                    owl:imports <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#> ;
                                                                     <http://purl.org/dc/elements/1.1/contributors> """Alvaro Pérez (LINHD_POSTDATA-UNED)
 https://www.linkedin.com/in/álvaro-pérez-pozo-ab241154/"""@en ,
                                                                                                                    """Bruno Sartini (Bolonia University)
@@ -249,6 +250,14 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 #    Object Properties
 #################################################################
 
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#affectsFirst
+:affectsFirst rdf:type owl:ObjectProperty ;
+              rdfs:domain :Metaplasm ;
+              rdfs:range <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> ;
+              rdfs:comment "This property points to the first of the words affected by a metaplasm"@en ;
+              rdfs:label "affectsFirst"@en .
+
+
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#analyses
 :analyses rdf:type owl:ObjectProperty ;
           owl:inverseOf :isAnalysedThrough ;
@@ -257,6 +266,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onDataRange xsd:string
                       ] ;
+          rdfs:range <http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> ;
           rdfs:comment "This property points to an instance of Redaction in which a WorkPattern, StanzaPattern or LinePattern presents analytical information about the work as a whole, the stanzas or the lines,  respectively." ;
           rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
           rdfs:label "analyses"@en .
@@ -371,6 +381,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough
 :isAnalysedThrough rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain <http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> ;
                    rdfs:range :Pattern ;
                    <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
                    <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
@@ -379,6 +390,8 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEchoOf
 :isEchoOf rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> ;
+          rdfs:range <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> ;
           rdfs:comment "This property points to a following Word (echo) that that rhymes with the current instance of Word"@en .
 
 
@@ -413,6 +426,12 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 :isPresentIn rdf:type owl:ObjectProperty ;
              owl:inverseOf :presents ;
              rdfs:domain :Rhyme ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf ( <http://postdata.linhd.uned.es/ontology/postdata-core#Redaction>
+                                        <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line>
+                                        <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza>
+                                      )
+                        ] ;
              rdfs:comment "This property points to the text (instance of Redaction, Line or Stanza) which contains the current item under analysis"@en ;
              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
              rdfs:label "isPresentIn"@en .
@@ -420,6 +439,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isRhymeWord
 :isRhymeWord rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> ;
              rdfs:range :Rhyme ;
              rdfs:comment "This property points to the instance of Rhyme that contains the item at hand as its rhyme word"@en ;
              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
@@ -604,7 +624,32 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymesWith
-:rhymesWith rdf:type owl:ObjectProperty .
+:rhymesWith rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> ;
+            rdfs:range <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> ;
+            rdfs:comment "This property points to an instance of Line that rhymes with the current Line under analysis"@en ;
+            rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+            rdfs:label "rhymesWith"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#successIn
+:successIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :Metaplasm ;
+           rdfs:range <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> ;
+           rdfs:comment "A metaplasm is presented in Line"@en ;
+           rdfs:label "successIn"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#typeOfMetaplasm
+:typeOfMetaplasm rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Metaplasm ;
+                 rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                              owl:hasValue <http://postdata.linhd.uned.es/kos/metaplasm-type>
+                            ] ;
+                 rdfs:comment "Type of Metaplasm"@en ;
+                 rdfs:label "typeOfMetaplasm"@en .
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#typeOfRhymeMatching
@@ -661,6 +706,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesLine> rdf:type owl:ObjectProperty ;
                                                                                   rdfs:subPropertyOf :analyses ;
                                                                                   rdfs:domain :LinePattern ;
+                                                                                  rdfs:range <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> ;
                                                                                   rdfs:comment "This property points to an instance of Line about which the item at hand presents analytical information"@en ;
                                                                                   rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
                                                                                   rdfs:label "analysesLine"@en .
@@ -670,6 +716,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesStanza> rdf:type owl:ObjectProperty ;
                                                                                     rdfs:subPropertyOf :analyses ;
                                                                                     rdfs:domain :StanzaPattern ;
+                                                                                    rdfs:range <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza> ;
                                                                                     rdfs:comment "This property points to an instance of Stanza about which the item at hand presents analytical information"@en ;
                                                                                     rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
                                                                                     rdfs:label "analysesStanza"@en .
@@ -823,6 +870,7 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm
 :hasMetaplasm rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> ;
               rdfs:range xsd:boolean .
 
 
@@ -1048,7 +1096,7 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 :numberOfFeet rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain :LinePattern ;
-              rdfs:range xsd:integer ;
+              rdfs:range xsd:positiveInteger ;
               <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
               <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
               rdfs:comment "Number of feet"@en ;
@@ -1060,7 +1108,7 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 :numberOfLines rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain :StanzaPattern ;
-               rdfs:range xsd:integer ;
+               rdfs:range xsd:positiveInteger ;
                <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
                <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
                rdfs:comment "Number of lines in item" ;
@@ -1072,7 +1120,7 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 :numberOfMorae rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain :Foot ;
-               rdfs:range xsd:integer ;
+               rdfs:range xsd:positiveInteger ;
                <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
                rdfs:comment "The number of morae the foot contains"@en ;
                rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
@@ -1083,7 +1131,7 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 :numberOfStanzas rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain :WorkPattern ;
-                 rdfs:range xsd:integer ;
+                 rdfs:range xsd:positiveInteger ;
                  <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
                  <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
                  rdfs:comment "Number of stanzas" ;
@@ -1095,7 +1143,7 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 :numberOfSyllables rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain :LinePattern ;
-                   rdfs:range xsd:integer ;
+                   rdfs:range xsd:positiveInteger ;
                    <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
                    <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
                    rdfs:comment "The exact number of syllables, that is, without paying attention to any metrical phenomena that may affect the counting"@en ;
@@ -1233,6 +1281,15 @@ owl:topObjectProperty rdfs:domain owl:Thing .
              rdfs:label "scannedLine"@en .
 
 
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#scheme
+:scheme rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Foot ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Abstraction that represents the outline of the unit through a pattern. E.g. “ox(o)“ to represent the type of syllables"@en ;
+        rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+        rdfs:label "scheme"@en .
+
+
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vowelTypeScheme
 :vowelTypeScheme rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
@@ -1248,6 +1305,26 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 #################################################################
 #    Classes
 #################################################################
+
+###  http://postdata.linhd.uned.es/ontology/postdata-core#Redaction
+<http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :presents ;
+                                                                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass :Rhyme
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :presentsRhymeMatching ;
+                                                                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                                        owl:hasValue <http://postdata.linhd.uned.es/kos/rhymeMatching-type>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ] .
+
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Foot
 :Foot rdf:type owl:Class ;
@@ -1515,6 +1592,11 @@ Eg.: The number of lines of a Stanza or its categorisation according to metrics 
                                            ]
                              ] ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://postdata.linhd.uned.es/ontology/postdata-core#notes> ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :altCountingMetricalScheme ;
                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                owl:onDataRange xsd:string
@@ -1569,6 +1651,34 @@ Eg.: The number of lines of a Stanza or its categorisation according to metrics 
              rdfs:comment """The prosodic analysis using a Redaction as the unit of reference
 Eg.: The complete distribution of accented syllables of a work"""@en ;
              rdfs:label "WorkPattern"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :presents ;
+                                                                                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                            owl:onClass :Rhyme
+                                                                                          ] .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty :presents ;
+                                                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                              owl:onClass :Rhyme
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty :presentsRhymeMatching ;
+                                                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                              owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                                                   owl:hasValue <http://postdata.linhd.uned.es/kos/rhymeMatching-type>
+                                                                                                                                 ]
+                                                                                                                               ) ;
+                                                                                                            rdf:type owl:Class
+                                                                                                          ]
+                                                                                            ] .
 
 
 ###  http://purl.org/linguistics/gold/Foot
