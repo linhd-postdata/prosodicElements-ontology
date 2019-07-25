@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "pdprosodic:WorkPattern" "pdprosodic:Foot" "pdprosodic:LinePattern" "pdprosodic:Pattern" "gold:Foot" "pdprosodic:StanzaPattern" ; /*classes style*/
+	"pdprosodic:LinePattern" -> "pdprosodic:Pattern" [ label = "rdfs:subClassOf" ];
+	"pdprosodic:StanzaPattern" -> "pdprosodic:Pattern" [ label = "rdfs:subClassOf" ];
+	"pdprosodic:Foot" -> "gold:Foot" [ label = "rdfs:subClassOf" ];
+	"pdprosodic:WorkPattern" -> "pdprosodic:Pattern" [ label = "rdfs:subClassOf" ];
+
+}
