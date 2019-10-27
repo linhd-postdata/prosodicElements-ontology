@@ -1886,7 +1886,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
     <owl:Class rdf:about="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#FootDivision">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mluisadiez</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-16T18:37:24Z</dc:date>
-        <rdfs:comment>Unit smaller than Foot</rdfs:comment>
+        <rdfs:comment>Unit smaller than Foot.</rdfs:comment>
         <rdfs:label xml:lang="en">FootDivision</rdfs:label>
     </owl:Class>
     
@@ -2009,7 +2009,7 @@ Some examples are dieresis, syneresis, sinalefa or hiatus.</rdfs:comment>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mluisadiez</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-16T18:37:24Z</dc:date>
         <rdfs:comment xml:lang="en">The notation employed to represent a metrical pattern.
-Eg.: The definition of the plus sign to encode strong positions</rdfs:comment>
+Eg.: The definition of the plus sign to encode strong positions.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://postdata.linhd.uned.es/ontology/postdata-prosodicElements</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">MetricalEncoding</rdfs:label>
     </owl:Class>
@@ -2020,7 +2020,7 @@ Eg.: The definition of the plus sign to encode strong positions</rdfs:comment>
 
     <owl:Class rdf:about="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable">
         <rdfs:subClassOf rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable"/>
-        <rdfs:comment xml:lang="en">Metric syllable built by applying metaplasms to syllables</rdfs:comment>
+        <rdfs:comment xml:lang="en">Metric syllable built by applying metaplasms to syllables.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://postdata.linhd.uned.es/ontology/postdata-prosodicElements</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">metricalSyllable</rdfs:label>
     </owl:Class>
