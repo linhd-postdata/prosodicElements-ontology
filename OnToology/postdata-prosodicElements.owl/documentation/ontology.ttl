@@ -7,7 +7,6 @@
 @base <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> .
 
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> rdf:type owl:Ontology ;
-                                                                    owl:imports <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#> ;
                                                                     <http://purl.org/dc/elements/1.1/contributors> """Alvaro Pérez (LINHD_POSTDATA-UNED)
 https://www.linkedin.com/in/álvaro-pérez-pozo-ab241154/"""@en ,
                                                                                                                    """Bruno Sartini (Bolonia University)
@@ -371,6 +370,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
               rdfs:subPropertyOf owl:topObjectProperty ;
               owl:inverseOf :isRhymeWord ;
               rdfs:domain :Rhyme ;
+              rdfs:range <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> ;
               <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
               <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
               rdfs:comment "This property points to the instance of Word for a further linguistic analysis/division by words"@en ;
@@ -381,7 +381,6 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough
 :isAnalysedThrough rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
-                   rdfs:domain <http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> ;
                    rdfs:range :Pattern ;
                    <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
                    <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
@@ -392,7 +391,9 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 :isEchoOf rdf:type owl:ObjectProperty ;
           rdfs:domain <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> ;
           rdfs:range <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> ;
-          rdfs:comment "This property points to a following Word (echo) that that rhymes with the current instance of Word"@en .
+          rdfs:comment "This property points to a following Word (echo) that that rhymes with the current instance of Word"@en ;
+          rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+          rdfs:label "isEchoOf"@en .
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEmployedIn
@@ -734,6 +735,10 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 #    Data properties
 #################################################################
 
+###  http://postdata.linhd.uned.es/ontology/postdata-core#notes
+<http://postdata.linhd.uned.es/ontology/postdata-core#notes> rdf:type owl:DatatypeProperty .
+
+
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#accentedVowels
 :accentedVowels rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
@@ -870,8 +875,10 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm
 :hasMetaplasm rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> ;
-              rdfs:range xsd:boolean .
+              rdfs:range xsd:boolean ;
+              rdfs:comment "If the line, word or syllable is affected by a metaplasm"@en ;
+              rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+              rdfs:label "hasMetaplasm"@en .
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRefrain
@@ -1025,6 +1032,13 @@ owl:topObjectProperty rdfs:domain owl:Thing .
            rdfs:comment "Regular metrics"@en ;
            rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
            rdfs:label "isRegular"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed
+:isStressed rdf:type owl:DatatypeProperty ;
+            rdfs:comment "If the syllable has accent"@en ;
+            rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+            rdfs:label "isStressed"@en .
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isUnissonant
@@ -1249,6 +1263,7 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeScheme
 :rhymeScheme rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Rhyme ;
              rdfs:range xsd:string ;
              <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
              <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^xsd:dateTime ;
@@ -1290,6 +1305,17 @@ owl:topObjectProperty rdfs:domain owl:Thing .
         rdfs:label "scheme"@en .
 
 
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition
+:stressPosition rdf:type owl:DatatypeProperty ;
+                rdfs:comment "Position of the stressed syllable from the end of the word"@en ;
+                rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                rdfs:label "stressPosition"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#syllabicMetricalScheme
+:syllabicMetricalScheme rdf:type owl:DatatypeProperty .
+
+
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vowelTypeScheme
 :vowelTypeScheme rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
@@ -1307,10 +1333,11 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 #################################################################
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-core#Redaction
-<http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty :presents ;
+<http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :isAnalysedThrough ;
                                                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                   owl:onClass :Rhyme
+                                                                                   owl:onClass :Pattern
                                                                                  ] ,
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty :presentsRhymeMatching ;
@@ -1441,6 +1468,7 @@ Some examples are dieresis, syneresis, sinalefa or hiatus."""@en ;
                   <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^xsd:dateTime ;
                   rdfs:comment """The notation employed to represent a metrical pattern.
 Eg.: The definition of the plus sign to encode strong positions"""@en ;
+                  rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
                   rdfs:label "MetricalEncoding"@en .
 
 
@@ -1449,7 +1477,10 @@ Eg.: The definition of the plus sign to encode strong positions"""@en ;
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme
-:Rhyme rdf:type owl:Class .
+:Rhyme rdf:type owl:Class ;
+       <http://purl.org/dc/elements/1.1/creator> "mluisadiez"@en ;
+       rdfs:comment "Repetition of similar sounding words occurring at the end of lines in poems or songs"@en ;
+       rdfs:label "Rhyme"@en .
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#RhymeMatch
@@ -1653,19 +1684,29 @@ Eg.: The complete distribution of accented syllables of a work"""@en ;
              rdfs:label "WorkPattern"@en .
 
 
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable
+:metricalSyllable rdf:type owl:Class ;
+                  rdfs:subClassOf <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable> ;
+                  rdfs:comment "Metric syllable built by applying metaplasms to syllables"@en ;
+                  rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                  rdfs:label "metricalSyllable"@en .
+
+
 ###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line
-<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty :presents ;
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :isAnalysedThrough ;
                                                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                            owl:onClass :Rhyme
+                                                                                            owl:onClass :LinePattern
                                                                                           ] .
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza
-<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza> rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty :presents ;
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty :isAnalysedThrough ;
                                                                                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                              owl:onClass :Rhyme
+                                                                                              owl:onClass :Pattern
                                                                                             ] ,
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty :presentsRhymeMatching ;
@@ -1679,6 +1720,14 @@ Eg.: The complete distribution of accented syllables of a work"""@en ;
                                                                                                             rdf:type owl:Class
                                                                                                           ]
                                                                                             ] .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable> rdf:type owl:Class .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> rdf:type owl:Class .
 
 
 ###  http://purl.org/linguistics/gold/Foot
