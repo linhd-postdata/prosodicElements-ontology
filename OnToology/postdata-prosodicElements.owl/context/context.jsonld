@@ -388,7 +388,8 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "notes" : {
-      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-core#notes"
+      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-core#notes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "interStrophicRelations" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#interStrophicRelations",
