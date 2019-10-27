@@ -1240,7 +1240,7 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#FootDivision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#FootDivision> <http://purl.org/dc/elements/1.1/creator> "mluisadiez" .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#FootDivision> <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#FootDivision> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit smaller than Foot" .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#FootDivision> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit smaller than Foot." .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#FootDivision> <http://www.w3.org/2000/01/rdf-schema#label> "FootDivision"@en .
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#LinePattern
@@ -1327,16 +1327,16 @@ _:genid47 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://w
 _:genid47 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://purl.org/dc/elements/1.1/creator> "mluisadiez" .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "The notation employed to represent a metrical pattern.\nEg.: The definition of the plus sign to encode strong positions"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "The notation employed to represent a metrical pattern.\nEg.: The definition of the plus sign to encode strong positions."@en .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "MetricalEncoding"@en .
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable> .
-<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable> <http://www.w3.org/2000/01/rdf-schema#comment> "Metric syllable built by applying metaplasms to syllables"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable> <http://www.w3.org/2000/01/rdf-schema#comment> "Metric syllable built by applying metaplasms to syllables."@en .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
-<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable> <http://www.w3.org/2000/01/rdf-schema#label> "metricalSyllable"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable> <http://www.w3.org/2000/01/rdf-schema#label> "MetricalSyllable"@en .
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
