@@ -24,8 +24,8 @@ This section provides details for each class and property defined by postdata-st
             title="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding">MetricalEncoding</a>
       </li>
       <li>
-         <a href="#metricalSyllable"
-            title="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable">metricalSyllable</a>
+         <a href="#MetricalSyllable"
+            title="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable">metricalSyllable</a>
       </li>
       <li>
          <a href="#Rhyme"
@@ -305,13 +305,13 @@ Eg.: The definition of the plus sign to encode strong positions</span>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="metricalSyllable">
+   <div class="entity" id="MetricalSyllable">
       <h3>metricalSyllable<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable</p>
+         <strong>IRI:</strong> http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable</p>
       <div class="comment">
          <span class="markdown">Metric syllable built by applying metaplasms to syllables</span>
       </div>
@@ -324,6 +324,14 @@ Eg.: The definition of the plus sign to encode strong positions</span>
          <dd>
             <span class="dotted"
                   title="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable">syllable</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isStressed"
+               title="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed">isStressed</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#stressPosition"
+               title="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition">stressPosition</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -770,12 +778,6 @@ Eg.: The complete distribution of accented syllables of a work</span>
                   title="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesStanza">analysesStanza</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#patterningMetricalScheme"
-                  title="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#patterningMetricalScheme">patterningMetricalScheme</a>
-               <sup class="type-dp" title="data property">dp</sup> 
-               <span class="logic">max</span> 1</dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted"
@@ -1232,6 +1234,11 @@ Eg.: The complete distribution of accented syllables of a work</span>
             <dt>has super-properties</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://postdata.linhd.uned.es/ontology/postdata-core#Redaction">redaction</span>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -3478,6 +3485,20 @@ Eg.: The complete distribution of accented syllables of a work</span>
          <dt>Is defined by</dt>
          <dd>http://postdata.linhd.uned.es/ontology/postdata-prosodicElements</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MetricalSyllable"
+                  title="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable">metricalSyllable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="isUnissonant">
       <h3>isUnissonant<sup class="type-dp" title="data property">dp</sup>
@@ -4384,6 +4405,20 @@ Eg.: The complete distribution of accented syllables of a work</span>
          <dt>Is defined by</dt>
          <dd>http://postdata.linhd.uned.es/ontology/postdata-prosodicElements</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MetricalSyllable"
+                  title="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable">metricalSyllable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="vowelTypeScheme">
       <h3>vowelTypeScheme<sup class="type-dp" title="data property">dp</sup>
