@@ -1,5 +1,4 @@
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> <http://www.w3.org/2002/07/owl#imports> <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> <http://purl.org/dc/elements/1.1/contributors> "Alvaro Pérez (LINHD_POSTDATA-UNED)\nhttps://www.linkedin.com/in/álvaro-pérez-pozo-ab241154/"@en .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> <http://purl.org/dc/elements/1.1/contributors> "Bruno Sartini (Bolonia University)\nhttps://orcid.org/0000-0002-9152-4402"@en .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> <http://purl.org/dc/elements/1.1/contributors> "Javier de la Rosa (LINHD_POSTDATA-UNED)\nhttps://www.linkedin.com/in/versae/"@en .
@@ -305,6 +304,7 @@ _:genid5 <http://www.w3.org/2002/07/owl#hasValue> <http://postdata.linhd.uned.es
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRhymeWord> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRhymeWord> <http://www.w3.org/2002/07/owl#inverseOf> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isRhymeWord> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRhymeWord> <http://www.w3.org/2000/01/rdf-schema#domain> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme> .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRhymeWord> <http://www.w3.org/2000/01/rdf-schema#range> <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRhymeWord> <http://purl.org/dc/elements/1.1/creator> "mluisadiez" .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRhymeWord> <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRhymeWord> <http://www.w3.org/2000/01/rdf-schema#comment> "This property points to the instance of Word for a further linguistic analysis/division by words"@en .
@@ -314,7 +314,6 @@ _:genid5 <http://www.w3.org/2002/07/owl#hasValue> <http://postdata.linhd.uned.es
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough> <http://www.w3.org/2000/01/rdf-schema#domain> <http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough> <http://purl.org/dc/elements/1.1/creator> "mluisadiez" .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough> <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
@@ -325,6 +324,8 @@ _:genid5 <http://www.w3.org/2002/07/owl#hasValue> <http://postdata.linhd.uned.es
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEchoOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEchoOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEchoOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This property points to a following Word (echo) that that rhymes with the current instance of Word"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEchoOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEchoOf> <http://www.w3.org/2000/01/rdf-schema#label> "isEchoOf"@en .
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEmployedIn
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEmployedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -645,6 +646,9 @@ _:genid20 <http://www.w3.org/2002/07/owl#hasValue> <http://postdata.linhd.uned.e
 # #################################################################
 # 
 # 
+# http://postdata.linhd.uned.es/ontology/postdata-core#notes
+<http://postdata.linhd.uned.es/ontology/postdata-core#notes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#accentedVowels
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#accentedVowels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#accentedVowels> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
@@ -769,8 +773,10 @@ _:genid21 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
-<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm> <http://www.w3.org/2000/01/rdf-schema#comment> "If the line, word or syllable is affected by a metaplasm"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm> <http://www.w3.org/2000/01/rdf-schema#label> "hasMetaplasm"@en .
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRefrain
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasRefrain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -911,6 +917,12 @@ _:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isRegular> <http://www.w3.org/2000/01/rdf-schema#comment> "Regular metrics"@en .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isRegular> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isRegular> <http://www.w3.org/2000/01/rdf-schema#label> "isRegular"@en .
+# 
+# http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed> <http://www.w3.org/2000/01/rdf-schema#comment> "If the syllable has accent"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed> <http://www.w3.org/2000/01/rdf-schema#label> "isStressed"@en .
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isUnissonant
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isUnissonant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1115,6 +1127,7 @@ _:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeScheme
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeScheme> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeScheme> <http://purl.org/dc/elements/1.1/creator> "mluisadiez" .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#rhymeScheme> <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:39:21Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
@@ -1152,6 +1165,15 @@ _:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#scheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#scheme> <http://www.w3.org/2000/01/rdf-schema#label> "scheme"@en .
 # 
+# http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Position of the stressed syllable from the end of the word"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition> <http://www.w3.org/2000/01/rdf-schema#label> "stressPosition"@en .
+# 
+# http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#syllabicMetricalScheme
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#syllabicMetricalScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vowelTypeScheme
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vowelTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#vowelTypeScheme> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
@@ -1173,11 +1195,12 @@ _:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-core#Redaction
+<http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#presents> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough> .
 _:genid23 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid23 <http://www.w3.org/2002/07/owl#onClass> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme> .
+_:genid23 <http://www.w3.org/2002/07/owl#onClass> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern> .
 <http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#presentsRhymeMatching> .
@@ -1311,6 +1334,7 @@ _:genid48 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://purl.org/dc/elements/1.1/creator> "mluisadiez" .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "The notation employed to represent a metrical pattern.\nEg.: The definition of the plus sign to encode strong positions"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "MetricalEncoding"@en .
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern
@@ -1318,6 +1342,9 @@ _:genid48 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme> <http://purl.org/dc/elements/1.1/creator> "mluisadiez"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme> <http://www.w3.org/2000/01/rdf-schema#comment> "Repetition of similar sounding words occurring at the end of lines in poems or songs"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme> <http://www.w3.org/2000/01/rdf-schema#label> "Rhyme"@en .
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#RhymeMatch
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#RhymeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1538,19 +1565,28 @@ _:genid97 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#WorkPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "The prosodic analysis using a Redaction as the unit of reference\nEg.: The complete distribution of accented syllables of a work"@en .
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#WorkPattern> <http://www.w3.org/2000/01/rdf-schema#label> "WorkPattern"@en .
 # 
+# http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable> .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable> <http://www.w3.org/2000/01/rdf-schema#comment> "Metric syllable built by applying metaplasms to syllables"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en .
+<http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable> <http://www.w3.org/2000/01/rdf-schema#label> "metricalSyllable"@en .
+# 
 # http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid98 .
 _:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid98 <http://www.w3.org/2002/07/owl#onProperty> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#presents> .
+_:genid98 <http://www.w3.org/2002/07/owl#onProperty> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough> .
 _:genid98 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid98 <http://www.w3.org/2002/07/owl#onClass> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme> .
+_:genid98 <http://www.w3.org/2002/07/owl#onClass> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#LinePattern> .
 # 
 # http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid99 .
 _:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid99 <http://www.w3.org/2002/07/owl#onProperty> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#presents> .
+_:genid99 <http://www.w3.org/2002/07/owl#onProperty> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough> .
 _:genid99 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid99 <http://www.w3.org/2002/07/owl#onClass> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme> .
+_:genid99 <http://www.w3.org/2002/07/owl#onClass> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern> .
 <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid100 .
 _:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid100 <http://www.w3.org/2002/07/owl#onProperty> <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#presentsRhymeMatching> .
@@ -1567,6 +1603,12 @@ _:genid103 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02
 _:genid103 <http://www.w3.org/2002/07/owl#hasValue> <http://postdata.linhd.uned.es/kos/rhymeMatching-type> .
 _:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://purl.org/linguistics/gold/Foot
 <http://purl.org/linguistics/gold/Foot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

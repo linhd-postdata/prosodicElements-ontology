@@ -189,10 +189,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme"
+    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#presents"
+    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough"
   } ]
 }, {
   "@id" : "_:genid24",
@@ -906,10 +906,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme"
+    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#LinePattern"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#presents"
+    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough"
   } ]
 }, {
   "@id" : "_:genid99",
@@ -919,10 +919,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme"
+    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#presents"
+    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough"
   } ]
 }, {
   "@id" : "http://creativecommons.org/ns#license",
@@ -2368,11 +2368,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-core#Redaction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid23"
   }, {
     "@id" : "_:genid24"
   } ]
+}, {
+  "@id" : "http://postdata.linhd.uned.es/ontology/postdata-core#notes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
@@ -2417,9 +2421,6 @@
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@language" : "en",
     "@value" : "pdprosodic"
-  } ],
-  "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "V1.0"
@@ -2538,6 +2539,10 @@
     "@language" : "en",
     "@value" : "The notation employed to represent a metrical pattern.\nEg.: The definition of the plus sign to encode strong positions"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "MetricalEncoding"
@@ -2550,7 +2555,19 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "mluisadiez"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Repetition of similar sounding words occurring at the end of lines in poems or songs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rhyme"
+  } ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#RhymeMatch",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -3219,8 +3236,17 @@
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasMetaplasm",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If the line, word or syllable is affected by a metaplasm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasMetaplasm"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -3278,6 +3304,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "hasRhymeWord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
@@ -3379,9 +3408,6 @@
     "@language" : "en",
     "@value" : "This property points to an item (Pattern) that contains analytical content about the current instance of Redaction or about its stanzas or lines"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-core#Redaction"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern"
   } ],
@@ -3455,6 +3481,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isEchoOf"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word"
@@ -3774,6 +3808,21 @@
     "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme"
   } ]
 }, {
+  "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If the syllable has accent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isStressed"
+  } ]
+}, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isUnissonant",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -3984,6 +4033,24 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Metric syllable built by applying metaplasms to syllables"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "metricalSyllable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable"
   } ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSymbol",
@@ -4711,6 +4778,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A rhyme scheme is the pattern of rhymes at the end of each line of a poem or song. It is usually referred to by using letters to indicate which lines rhyme; lines designated with the same letter all rhyme with each other"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Rhyme"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
     "@value" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"
@@ -4829,6 +4899,21 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Position of the stressed syllable from the end of the word"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "stressPosition"
+  } ]
+}, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#successIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4845,6 +4930,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line"
   } ]
+}, {
+  "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#syllabicMetricalScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#typeOfMetaplasm",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -5120,16 +5208,24 @@
   } ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid98"
   } ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid99"
   }, {
     "@id" : "_:genid100"
   } ]
+}, {
+  "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesLine",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],

@@ -28,8 +28,14 @@
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
+    "syllabicMetricalScheme" : {
+      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#syllabicMetricalScheme"
+    },
     "Metaplasm" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Metaplasm"
+    },
+    "metricalSyllable" : {
+      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable"
     },
     "hasFirstFoot" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasFirstFoot",
@@ -95,6 +101,9 @@
     "patterningMetricalScheme" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#patterningMetricalScheme",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isStressed" : {
+      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed"
     },
     "RhymeMatch" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#RhymeMatch"
@@ -246,6 +255,9 @@
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#nextUnit",
       "@type" : "@id"
     },
+    "Syllable" : {
+      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable"
+    },
     "typeOfMetaplasm" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#typeOfMetaplasm",
       "@type" : "@id"
@@ -376,8 +388,7 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "notes" : {
-      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-core#notes",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-core#notes"
     },
     "interStrophicRelations" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#interStrophicRelations",
@@ -396,6 +407,9 @@
     "isEmployedIn" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isEmployedIn",
       "@type" : "@id"
+    },
+    "stressPosition" : {
+      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition"
     },
     "analysesLine" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesLine",
