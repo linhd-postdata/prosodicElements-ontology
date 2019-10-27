@@ -2,16 +2,22 @@
 <rdf:RDF xmlns="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#"
      xml:base="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="http://creativecommons.org/ns#"
-     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:ns1="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://purl.org/ontology/olo/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:postdata-dates="http://postdata.linhd.uned.es/ontology/postdata-dates#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements">
+        <owl:imports rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#"/>
         <dc:contributors xml:lang="en">Alvaro Pérez (LINHD_POSTDATA-UNED)
 https://www.linkedin.com/in/álvaro-pérez-pozo-ab241154/</dc:contributors>
         <dc:contributors xml:lang="en">Bruno Sartini (Bolonia University)
@@ -36,7 +42,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
         <terms:publisher>POSTDATA Project</terms:publisher>
         <vann:preferredNamespacePrefix xml:lang="en">pdprosodic</vann:preferredNamespacePrefix>
         <owl:versionInfo>V1.0</owl:versionInfo>
-        <ns1:license xml:lang="en">https://creativecommons.org/licenses/by/4.0/</ns1:license>
+        <ns:license xml:lang="en">https://creativecommons.org/licenses/by/4.0/</ns:license>
     </owl:Ontology>
     
 
@@ -1139,13 +1145,6 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
     
 
 
-    <!-- http://postdata.linhd.uned.es/ontology/postdata-core#notes -->
-
-
-    <owl:DatatypeProperty rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#notes"/>
-    
-
-
     <!-- http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#accentedVowels -->
 
 
@@ -1965,7 +1964,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
     <!-- http://postdata.linhd.uned.es/ontology/postdata-core#Redaction -->
 
 
-    <owl:Class rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#Redaction">
+    <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#Redaction">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough"/>
@@ -1990,7 +1989,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
                 </owl:onClass>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
+    </rdf:Description>
     
 
 
@@ -2481,7 +2480,7 @@ Eg.: The complete distribution of accented syllables of a work</rdfs:comment>
     <!-- http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line -->
 
 
-    <owl:Class rdf:about="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line">
+    <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough"/>
@@ -2489,14 +2488,14 @@ Eg.: The complete distribution of accented syllables of a work</rdfs:comment>
                 <owl:onClass rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#LinePattern"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
+    </rdf:Description>
     
 
 
     <!-- http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza -->
 
 
-    <owl:Class rdf:about="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza">
+    <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough"/>
@@ -2521,21 +2520,7 @@ Eg.: The complete distribution of accented syllables of a work</rdfs:comment>
                 </owl:onClass>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable -->
-
-
-    <owl:Class rdf:about="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable"/>
-    
-
-
-    <!-- http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word -->
-
-
-    <owl:Class rdf:about="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word"/>
+    </rdf:Description>
     
 
 

@@ -7,6 +7,7 @@
 @base <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> .
 
 <http://postdata.linhd.uned.es/ontology/postdata-prosodicElements> rdf:type owl:Ontology ;
+                                                                    owl:imports <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#> ;
                                                                     <http://purl.org/dc/elements/1.1/contributors> """Alvaro Pérez (LINHD_POSTDATA-UNED)
 https://www.linkedin.com/in/álvaro-pérez-pozo-ab241154/"""@en ,
                                                                                                                    """Bruno Sartini (Bolonia University)
@@ -735,10 +736,6 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 #    Data properties
 #################################################################
 
-###  http://postdata.linhd.uned.es/ontology/postdata-core#notes
-<http://postdata.linhd.uned.es/ontology/postdata-core#notes> rdf:type owl:DatatypeProperty .
-
-
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#accentedVowels
 :accentedVowels rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
@@ -1333,8 +1330,7 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 #################################################################
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-core#Redaction
-<http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty :isAnalysedThrough ;
                                                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                    owl:onClass :Pattern
@@ -1693,8 +1689,7 @@ Eg.: The complete distribution of accented syllables of a work"""@en ;
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line
-<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> rdf:type owl:Class ;
-                                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty :isAnalysedThrough ;
                                                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                             owl:onClass :LinePattern
@@ -1702,8 +1697,7 @@ Eg.: The complete distribution of accented syllables of a work"""@en ;
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza
-<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza> rdf:type owl:Class ;
-                                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty :isAnalysedThrough ;
                                                                                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                               owl:onClass :Pattern
@@ -1720,14 +1714,6 @@ Eg.: The complete distribution of accented syllables of a work"""@en ;
                                                                                                             rdf:type owl:Class
                                                                                                           ]
                                                                                             ] .
-
-
-###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable
-<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable> rdf:type owl:Class .
-
-
-###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word
-<http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word> rdf:type owl:Class .
 
 
 ###  http://purl.org/linguistics/gold/Foot
