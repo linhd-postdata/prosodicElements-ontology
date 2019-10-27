@@ -2022,7 +2022,7 @@ Eg.: The definition of the plus sign to encode strong positions.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable"/>
         <rdfs:comment xml:lang="en">Metric syllable built by applying metaplasms to syllables.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://postdata.linhd.uned.es/ontology/postdata-prosodicElements</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">metricalSyllable</rdfs:label>
+        <rdfs:label xml:lang="en">MetricalSyllable</rdfs:label>
     </owl:Class>
     
 
