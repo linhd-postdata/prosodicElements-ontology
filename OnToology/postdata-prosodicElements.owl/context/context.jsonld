@@ -34,9 +34,6 @@
     "Metaplasm" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Metaplasm"
     },
-    "metricalSyllable" : {
-      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable"
-    },
     "hasFirstFoot" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#hasFirstFoot",
       "@type" : "@id"
@@ -80,11 +77,11 @@
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#phonemePatternByManner",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Thing" : {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
-    },
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "MetricalSyllable" : {
+      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable"
     },
     "analyses" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#analyses",
@@ -103,7 +100,8 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "isStressed" : {
-      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed"
+      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "RhymeMatch" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#RhymeMatch"
@@ -410,7 +408,8 @@
       "@type" : "@id"
     },
     "stressPosition" : {
-      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition"
+      "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "analysesLine" : {
       "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesLine",

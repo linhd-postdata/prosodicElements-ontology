@@ -261,11 +261,6 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#analyses
 :analyses rdf:type owl:ObjectProperty ;
           owl:inverseOf :isAnalysedThrough ;
-          rdfs:domain [ rdf:type owl:Restriction ;
-                        owl:onProperty :patterningMetricalScheme ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:string
-                      ] ;
           rdfs:range <http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> ;
           rdfs:comment "This property points to an instance of Redaction in which a WorkPattern, StanzaPattern or LinePattern presents analytical information about the work as a whole, the stanzas or the lines,  respectively." ;
           rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
@@ -382,6 +377,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isAnalysedThrough
 :isAnalysedThrough rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain <http://postdata.linhd.uned.es/ontology/postdata-core#Redaction> ;
                    rdfs:range :Pattern ;
                    <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
                    <http://purl.org/dc/elements/1.1/date> "2018-06-16T20:30:43Z"^^xsd:dateTime ;
@@ -724,10 +720,6 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
                                                                                     rdfs:label "analysesStanza"@en .
 
 
-###  http://www.w3.org/2002/07/owl#topObjectProperty
-owl:topObjectProperty rdfs:domain owl:Thing .
-
-
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 <http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
 
@@ -1033,6 +1025,8 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#isStressed
 :isStressed rdf:type owl:DatatypeProperty ;
+            rdfs:domain :MetricalSyllable ;
+            rdfs:range xsd:boolean ;
             rdfs:comment "If the syllable has accent"@en ;
             rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
             rdfs:label "isStressed"@en .
@@ -1304,6 +1298,8 @@ owl:topObjectProperty rdfs:domain owl:Thing .
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#stressPosition
 :stressPosition rdf:type owl:DatatypeProperty ;
+                rdfs:domain :MetricalSyllable ;
+                rdfs:range xsd:integer ;
                 rdfs:comment "Position of the stressed syllable from the end of the word"@en ;
                 rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
                 rdfs:label "stressPosition"@en .
@@ -1466,6 +1462,14 @@ Some examples are dieresis, syneresis, sinalefa or hiatus."""@en ;
 Eg.: The definition of the plus sign to encode strong positions"""@en ;
                   rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
                   rdfs:label "MetricalEncoding"@en .
+
+
+###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable
+:MetricalSyllable rdf:type owl:Class ;
+                  rdfs:subClassOf <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable> ;
+                  rdfs:comment "Metric syllable built by applying metaplasms to syllables"@en ;
+                  rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
+                  rdfs:label "metricalSyllable"@en .
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern
@@ -1678,14 +1682,6 @@ Eg.: The number of lines of a Stanza or its categorisation according to metrics 
              rdfs:comment """The prosodic analysis using a Redaction as the unit of reference
 Eg.: The complete distribution of accented syllables of a work"""@en ;
              rdfs:label "WorkPattern"@en .
-
-
-###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#metricalSyllable
-:metricalSyllable rdf:type owl:Class ;
-                  rdfs:subClassOf <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable> ;
-                  rdfs:comment "Metric syllable built by applying metaplasms to syllables"@en ;
-                  rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
-                  rdfs:label "metricalSyllable"@en .
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line
