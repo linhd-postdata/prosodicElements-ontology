@@ -2368,15 +2368,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-core#Redaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid23"
   }, {
     "@id" : "_:genid24"
   } ]
-}, {
-  "@id" : "http://postdata.linhd.uned.es/ontology/postdata-core#notes",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
@@ -2421,6 +2417,9 @@
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@language" : "en",
     "@value" : "pdprosodic"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "V1.0"
@@ -5208,24 +5207,16 @@
   } ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Line",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid98"
   } ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Stanza",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid99"
   }, {
     "@id" : "_:genid100"
   } ]
-}, {
-  "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Word",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://postdata.linhd.uned.es/ontology/postdata-structuralElements#analysesLine",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
