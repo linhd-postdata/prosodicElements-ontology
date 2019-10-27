@@ -18,6 +18,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:gold="http://purl.org/linguistics/gold/"
      xmlns:lawd="http://lawd.info/ontology/"
+     xmlns:raop="http://bakulf.github.io/raop/0.1#"
      xmlns:rdau="http://www.rdaregistry.info/Elements/u/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -31,7 +32,9 @@
      xmlns:schema="https://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:pddates="http://postdata.linhd.uned.es/ontology/postdata-dates#"
+     xmlns:pdtrans="http://postdata.linhd.uned.es/ontology/postdata-transmission#"
      xmlns:schema2="http://schema.org/"
+     xmlns:bibframe="http://id.loc.gov/ontologies/bibframe/"
      xmlns:pdstruct="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#"
      xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:pdprosodic="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#"
@@ -2516,10 +2519,10 @@ Eg.: The complete distribution of accented syllables of a work</rdfs:comment>
      -->
 
     <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/CLP104_subject_to">
+        <rdfs:label xml:lang="en">subject to</rdfs:label>
         <rdfs:comment xml:lang="en">This property associates a publication, i.e. an instance of F3 Manifestation Product Type, with an instance of E30 Right, which applies to all exemplars of that publication, as long as they are recognised as exemplars of that publication.
 The rights covered by this property may include: acquisition or access authorisation; terms of availability; access restrictions on the Manifestation Product Type; etc.
 </rdfs:comment>
-        <rdfs:label xml:lang="en">subject to</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/CLP104i_applies_to">
         <rdfs:comment xml:lang="en">
@@ -2907,6 +2910,7 @@ The property R3.1 has type: E55 Type allows for specifying the role played by th
         <rdfs:label xml:lang="en">realises</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R40_has_representative_expression">
+        <rdfs:label xml:lang="en">has representative expression</rdfs:label>
         <rdfs:comment xml:lang="en">This property identifies an instance of F22 Self-Contained Expression that has been chosen as the most characteristic expression of the instance of F1 Work of which it is an expression. There is no other semantic implication to this notion of being characteristic than to be an adequate candidate to uniquely identify the Work realized by it. Prototypically, this is the instance of F22 Self-Contained Expression that is deemed characteristic of an instance of F15 Complex Work.
 Typically, any expression that is not regarded as “representative” for the work it expresses, would require a controlled access point, with qualifiers specifying the differences between that expression and a representative expression, although this may not always be done in practice. The title of a Work may not be one taken from a representative expression.
 A given work can have more than one representative expression, provided the differences between these expressions are not deemed “substantial.” If the anticipated needs of users are not considered to call for bibliographic distinctions between variant expressions of a work, then even expressions that differ significantly from each other can be regarded as equally representative for the work. (See FRBR: Final Report, p. 19-20).
@@ -2914,7 +2918,6 @@ A given expression can be deemed representative for a work with regard to some o
 R40 has representative expression is a shortcut of the more developed path F1 Work R50i was assigned by F42 Representative Expression Assignment R51 assigned F2 Expression.
 
 </rdfs:comment>
-        <rdfs:label xml:lang="en">has representative expression</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R40i_is_representative_expression_for">
         <rdfs:label xml:lang="en">is representative expression for</rdfs:label>
@@ -3077,9 +3080,9 @@ This property is a shortcut of: F2 Expression P165i is incorporated in F24 Publi
 </rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R55_has_nomen_form">
+        <rdfs:label xml:lang="en">has nomen form</rdfs:label>
         <rdfs:comment xml:lang="en">This property associates an instance of F35 Nomen Use Statement with the instance of E55 Type that characterizes the Nomen referred to in the Nomen Use Statement, such as abbreviation, full name etc. In the case of abbreviations, the source of this form may or may not be explicitly mentioned.
 </rdfs:comment>
-        <rdfs:label xml:lang="en">has nomen form</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R55i_is_nomen_form_in">
         <rdfs:label xml:lang="en">is nomen form in</rdfs:label>
