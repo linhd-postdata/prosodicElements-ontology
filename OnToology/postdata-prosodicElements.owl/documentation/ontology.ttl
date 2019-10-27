@@ -1370,7 +1370,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
 :FootDivision rdf:type owl:Class ;
               <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
               <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^xsd:dateTime ;
-              rdfs:comment "Unit smaller than Foot" ;
+              rdfs:comment "Unit smaller than Foot." ;
               rdfs:label "FootDivision"@en .
 
 
@@ -1459,7 +1459,7 @@ Some examples are dieresis, syneresis, sinalefa or hiatus."""@en ;
                   <http://purl.org/dc/elements/1.1/creator> "mluisadiez" ;
                   <http://purl.org/dc/elements/1.1/date> "2018-06-16T18:37:24Z"^^xsd:dateTime ;
                   rdfs:comment """The notation employed to represent a metrical pattern.
-Eg.: The definition of the plus sign to encode strong positions"""@en ;
+Eg.: The definition of the plus sign to encode strong positions."""@en ;
                   rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
                   rdfs:label "MetricalEncoding"@en .
 
@@ -1467,9 +1467,9 @@ Eg.: The definition of the plus sign to encode strong positions"""@en ;
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable
 :MetricalSyllable rdf:type owl:Class ;
                   rdfs:subClassOf <http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable> ;
-                  rdfs:comment "Metric syllable built by applying metaplasms to syllables"@en ;
+                  rdfs:comment "Metric syllable built by applying metaplasms to syllables."@en ;
                   rdfs:isDefinedBy "http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"@en ;
-                  rdfs:label "metricalSyllable"@en .
+                  rdfs:label "MetricalSyllable"@en .
 
 
 ###  http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#Pattern

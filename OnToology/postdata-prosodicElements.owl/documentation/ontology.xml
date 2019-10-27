@@ -2,15 +2,13 @@
 <rdf:RDF xmlns="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#"
      xml:base="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-     xmlns:ns1="http://creativecommons.org/ns#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:core="http://purl.org/ontology/olo/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/"
@@ -42,7 +40,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
         <terms:publisher>POSTDATA Project</terms:publisher>
         <vann:preferredNamespacePrefix xml:lang="en">pdprosodic</vann:preferredNamespacePrefix>
         <owl:versionInfo>V1.0</owl:versionInfo>
-        <ns:license xml:lang="en">https://creativecommons.org/licenses/by/4.0/</ns:license>
+        <ns1:license xml:lang="en">https://creativecommons.org/licenses/by/4.0/</ns1:license>
     </owl:Ontology>
     
 
@@ -2018,7 +2016,7 @@ Technical Director. Salvador Ros Muñoz -- https://orcid.org/0000-0001-6330-4958
     <owl:Class rdf:about="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#FootDivision">
         <dc:creator>mluisadiez</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-16T18:37:24Z</dc:date>
-        <rdfs:comment>Unit smaller than Foot</rdfs:comment>
+        <rdfs:comment>Unit smaller than Foot.</rdfs:comment>
         <rdfs:label xml:lang="en">FootDivision</rdfs:label>
     </owl:Class>
     
@@ -2144,7 +2142,7 @@ Some examples are dieresis, syneresis, sinalefa or hiatus.</rdfs:comment>
         <dc:creator>mluisadiez</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-16T18:37:24Z</dc:date>
         <rdfs:comment xml:lang="en">The notation employed to represent a metrical pattern.
-Eg.: The definition of the plus sign to encode strong positions</rdfs:comment>
+Eg.: The definition of the plus sign to encode strong positions.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://postdata.linhd.uned.es/ontology/postdata-prosodicElements</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">MetricalEncoding</rdfs:label>
     </owl:Class>
@@ -2156,9 +2154,9 @@ Eg.: The definition of the plus sign to encode strong positions</rdfs:comment>
 
     <owl:Class rdf:about="http://postdata.linhd.uned.es/ontology/postdata-prosodicElements#MetricalSyllable">
         <rdfs:subClassOf rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-structuralElements#Syllable"/>
-        <rdfs:comment xml:lang="en">Metric syllable built by applying metaplasms to syllables</rdfs:comment>
+        <rdfs:comment xml:lang="en">Metric syllable built by applying metaplasms to syllables.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://postdata.linhd.uned.es/ontology/postdata-prosodicElements</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">metricalSyllable</rdfs:label>
+        <rdfs:label xml:lang="en">MetricalSyllable</rdfs:label>
     </owl:Class>
     
 
